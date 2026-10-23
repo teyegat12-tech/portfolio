@@ -1050,22 +1050,49 @@ a:hover { opacity: .6; }
 }
 @media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
 
-/* ---------- Помехи по краям экрана (VHS-глитч) ---------- */
+/* ---------- Помехи по краям экрана (VHS-глитч) ----------
+   Варианты переключаются в адресе: ?glitch=a (кассета), b (телевизор), c (мягкий) */
 .glitch { position: fixed; inset: 0; pointer-events: none; z-index: 51; overflow: hidden; }
 .glitch i {
   position: absolute;
   display: block;
-  background: url("assets/noise.png") 0 0 / 128px 128px repeat, rgba(205, 205, 205, .5);
-  background-blend-mode: multiply;
-  mix-blend-mode: screen;
   opacity: 0;
+  mix-blend-mode: screen;
   animation: glitch-blink var(--t, .22s) steps(3) forwards;
 }
-.glitch i.is-line { background: rgba(205, 205, 205, .55); }
+/* цветная полоса: красный и голубой разъехались, между ними зерно */
+.glitch i.is-bar {
+  background: url("assets/noise.png") 0 0 / 128px 128px repeat, rgba(205, 205, 205, .45);
+  background-blend-mode: multiply;
+  box-shadow: calc(var(--s, 4px) * -1) 0 0 rgba(255, 30, 60, .75), var(--s, 4px) 0 0 rgba(0, 220, 255, .75);
+}
+.glitch i.is-line { background: rgba(230, 230, 230, .6); box-shadow: -3px 0 0 rgba(255, 30, 60, .8), 3px 0 0 rgba(0, 220, 255, .8); }
+.glitch i.is-red  { background: rgba(255, 40, 70, .7); }
+.glitch i.is-cyan { background: rgba(0, 220, 255, .7); }
 @keyframes glitch-blink {
   0%   { opacity: var(--o, .5); transform: translateX(0); }
   33%  { opacity: 0;            transform: translateX(var(--dx, 8px)); }
   66%  { opacity: var(--o, .5); transform: translateX(calc(var(--dx, 8px) * -1)); }
   100% { opacity: 0;            transform: translateX(0); }
 }
-@media (prefers-reduced-motion: reduce) { .glitch { display: none; } }
+/* весь экран вздрагивает */
+html.is-jolt body > :not(.grain):not(.glitch):not(.sky):not(script) { animation: jolt .26s steps(4) 1; }
+@keyframes jolt {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(var(--jx, 6px), -2px); }
+  50%  { transform: translate(calc(var(--jx, 6px) * -.6), 1px); }
+  75%  { transform: translate(calc(var(--jx, 6px) * .3), 0); }
+  100% { transform: translate(0, 0); }
+}
+/* «Телевизор»: на миг цвет расслаивается и сверху вниз проезжает полоса */
+html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filter: url(#rgb-split); }
+.glitch .tracking {
+  position: absolute; left: 0; right: 0; top: -12vh; height: 10vh;
+  background: url("assets/noise.png") 0 0 / 160px 160px repeat, linear-gradient(transparent, rgba(205, 205, 205, .35) 45%, rgba(205, 205, 205, .35) 55%, transparent);
+  background-blend-mode: multiply;
+  mix-blend-mode: screen;
+  opacity: .45;
+  animation: tracking .55s linear forwards;
+}
+@keyframes tracking { from { transform: translateY(0); } to { transform: translateY(125vh); } }
+@media (prefers-reduced-motion: reduce) { .glitch { display: none; } html.is-jolt body > * { animation: none !important; filter: none !important; } }
