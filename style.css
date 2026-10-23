@@ -313,40 +313,38 @@ a:hover { opacity: .6; }
 }
 .soft__bar { display: none; }
 
-/* ---------- Скиллы ---------- */
-.skills__track {
+/* ---------- Скиллы: 8 пунктов, сетка 4×2 ---------- */
+.skills__track { margin-top: calc(87 * var(--u)); }
+.skills__grid {
   display: grid;
-  grid-template-columns: calc(860 * var(--u)) calc(860 * var(--u));
-  column-gap: calc(40 * var(--u));
-  align-items: start;
-  margin-top: calc(87 * var(--u));
-}
-.skills__col {
-  display: flex;
-  flex-direction: column;
-  gap: calc(22 * var(--u));
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(72 * var(--u)) calc(40 * var(--u));
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .skill {
   display: flex;
   flex-direction: column;
+  padding-top: calc(24 * var(--u));
+  border-top: 1px solid rgba(205, 205, 205, .3);
   font-size: max(13px, calc(20 * var(--u)));
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
 .skill__num {
-  margin-bottom: calc(8 * var(--u));
+  margin-bottom: calc(40 * var(--u));
   font-family: var(--font-display);
   font-weight: 800;
+  font-size: calc(48 * var(--u));
   line-height: 1;
   letter-spacing: 0;
 }
+.skill__title { min-height: 2.4em; text-transform: uppercase; }
 .skill__desc {
-  margin-top: calc(2 * var(--u));
-  max-width: calc(800 * var(--u));
+  margin-top: calc(16 * var(--u));
   color: var(--text-secondary);
 }
-.skills__col--left .skill { align-items: flex-end; text-align: right; }
-.skills__col--left .skill__desc { max-width: calc(680 * var(--u)); }
 .skills__nav { display: none; }
 
 /* ---------- Апгрейд / сертификаты ---------- */
@@ -830,11 +828,13 @@ a:hover { opacity: .6; }
     scroll-snap-align: start;
     font-size: max(13px, calc(14 * var(--m)));
   }
-  .skill__num { margin-bottom: calc(16 * var(--m)); }
+  .skill { padding-top: calc(16 * var(--m)); }
+  .skill__num { margin-bottom: calc(24 * var(--m)); font-size: calc(32 * var(--m)); }
+  .skill__title { min-height: 0; }
   .skill__desc,
   .skills__col--left .skill__desc {
-    margin: calc(16 * var(--m)) 0 0 calc(40 * var(--m));
-    max-width: calc(280 * var(--m));
+    margin: calc(16 * var(--m)) 0 0;
+    max-width: calc(300 * var(--m));
   }
   .skills__nav {
     display: flex;
