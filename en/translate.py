@@ -126,6 +126,11 @@ T = {
 'Примеры актуальных работ вышлю по&nbsp;запросу.': 'Recent work samples are available on request.',
 'Старые работы, находящиеся в&nbsp;свободном доступе, можете посмотреть тут:': 'Older public work can be found here:',
 'Короткевич': 'Korotkevich', 'Надежда': 'Nadezhda',
+'{ Многостраничный сайт, UI/UX, адаптив }': '{ Multi-page website, UI/UX, responsive }',
+'Сайт школы скорочтения Олега Андреева. Главная, страницы курсов и&nbsp;цен, расписание, тест скорости чтения, личный кабинет и&nbsp;оформление заказа. Адаптив под планшет и&nbsp;смартфон.': 'Website for Oleg Andreev’s speed-reading school. Home page, course and pricing pages, schedule, reading speed test, personal account and checkout. Tablet and mobile layouts.',
+'Школа Андреева: главная страница': 'Andreev School: home page', 'Школа Андреева: мобильная версия': 'Andreev School: mobile version',
+'Школа Андреева: результаты теста скорости чтения': 'Andreev School: reading speed test results', 'Школа Андреева: программы обучения': 'Andreev School: programs',
+'Школа Андреева: стоимость обучения': 'Andreev School: pricing', 'Школа Андреева: о методе': 'Andreev School: about the method',
 # CV / language
 'Скачать CV': 'Download CV', 'Korotkevich_Nadezhda_CV_RU.pdf': 'Korotkevich_Nadezhda_CV_EN.pdf',
 }
