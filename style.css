@@ -1298,3 +1298,74 @@ html:not(.mtv-open) .mtv * { transition-delay: 0s !important; transition-duratio
   .mtv *, .fab { transition-duration: .01s !important; transition-delay: 0s !important; animation: none !important; }
   .mtv__doodles .boil { filter: none; }
 }
+
+/* --- панк-добавки: брызги краски, скотч, булавка, буквы «из газеты», лента --- */
+.mtv__doodles .splat { opacity: 0; transform-origin: 480px 470px; transform: scale(.2); transition: opacity .1s, transform .25s cubic-bezier(.34, 1.8, .64, 1); }
+.mtv-open .mtv__doodles .splat { opacity: 1; transform: none; transition-delay: .9s; }
+.mtv-open .d9 { transition-delay: 1s; }
+
+/* буквы MENU как вырезанные из разных журналов */
+.mtv__logo { position: absolute; align-items: flex-start; }
+.mtv__logo span:nth-child(2) { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; }
+.mtv__logo span:nth-child(3) { font-family: var(--font-mono); font-weight: 400; background: #111; color: #ffe500; border-color: #111; }
+.mtv__logo span:nth-child(4) { font-size: 1.15em; }
+.mtv__logo .pin {
+  position: absolute; left: 62%; top: -14px; width: 70px; height: 22px;
+  transform: rotate(-18deg) scale(0); transform-origin: left center;
+  transition: transform .3s cubic-bezier(.34, 1.8, .64, 1);
+}
+.mtv-open .mtv__logo .pin { transform: rotate(-18deg); transition-delay: 1s; }
+
+/* кусочки скотча на стикерах */
+.mtv__nav a::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 54px;
+  height: 18px;
+  background: rgba(240, 235, 215, .78);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  transform: translateX(-50%) rotate(calc(var(--r) * -3));
+  clip-path: polygon(0 10%, 6% 0, 12% 12%, 18% 0, 100% 4%, 94% 100%, 88% 88%, 82% 100%, 0 92%);
+}
+.mtv__nav li:nth-child(3n + 2) a::before { left: 8px; transform: rotate(-35deg); }
+.mtv__nav li:nth-child(3n) a::before { left: auto; right: -16px; top: auto; bottom: -6px; transform: rotate(-40deg); }
+
+/* диагональная лента с бегущей строкой, как наклейка на кассете */
+.mtv__tape {
+  position: absolute;
+  right: -10%;
+  bottom: 12%;
+  width: 70%;
+  display: flex;
+  overflow: hidden;
+  padding: 8px 0;
+  background: #111;
+  color: #ffe500;
+  font-family: var(--font-mono);
+  font-size: clamp(12px, 1.1vw, 18px);
+  letter-spacing: .12em;
+  white-space: nowrap;
+  transform: rotate(-8deg) translateX(110%);
+  transition: transform .5s cubic-bezier(.7, 0, .2, 1);
+  box-shadow: 0 6px 0 #ff3ea5;
+}
+.mtv-open .mtv__tape { transform: rotate(-8deg); transition-delay: .7s; }
+.mtv__tape span { flex: none; animation: tape 14s linear infinite; }
+@keyframes tape { to { transform: translateX(-100%); } }
+
+/* фон слегка «ксерокопия»: грубое зерно поверх жёлтого */
+.mtv__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/noise.png") 0 0 / 180px 180px;
+  mix-blend-mode: multiply;
+  opacity: .09;
+}
+
+@media (max-width: 1199px) {
+  .mtv__tape { width: 120%; right: -10%; bottom: 13%; }
+  .mtv__nav a::before { width: 40px; height: 14px; top: -9px; }
+}
