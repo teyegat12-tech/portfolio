@@ -1108,10 +1108,10 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
-  width: 56px;
-  height: 56px;
-  padding: 0 15px;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0 11px;
   border: 1px solid var(--line);
   background: var(--bg-base);
   color: var(--text-primary);
@@ -1122,7 +1122,7 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
   transition: opacity .3s, transform .4s cubic-bezier(.34, 1.8, .64, 1), background .2s;
 }
 .fab.is-on { opacity: 1; transform: none; pointer-events: auto; }
-.fab span { display: block; height: 2px; background: currentColor; transition: transform .25s, box-shadow .25s; }
+.fab span { display: block; height: 1.5px; background: currentColor; transition: transform .25s, box-shadow .25s; }
 .fab:hover { background: #ffe500; color: #111; border-color: #111; transform: rotate(-4deg) scale(1.06); }
 .fab:hover span { box-shadow: -3px 0 0 #ff3ea5, 3px 0 0 #00e5ff; }
 .fab:hover span:nth-child(1) { transform: translateX(-3px); }
@@ -1288,7 +1288,7 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
 html:not(.mtv-open) .mtv * { transition-delay: 0s !important; transition-duration: .2s !important; }
 
 @media (max-width: 1199px) {
-  .fab { top: 14px; right: 14px; width: 48px; height: 48px; padding: 0 13px; }
+  .fab { top: 14px; right: 14px; width: 36px; height: 36px; padding: 0 10px; }
   .mtv__close { top: 14px; right: 14px; width: 48px; height: 48px; }
   .mtv__nav ul { grid-template-columns: 1fr; justify-items: center; gap: 12px; }
   .mtv__nav a { font-size: clamp(22px, 7vw, 40px); box-shadow: 4px 4px 0 #111; }
@@ -1316,28 +1316,12 @@ html:not(.mtv-open) .mtv * { transition-delay: 0s !important; transition-duratio
 }
 .mtv-open .mtv__logo .pin { transform: rotate(-18deg); transition-delay: 1s; }
 
-/* кусочки скотча на стикерах */
-.mtv__nav a::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  width: 54px;
-  height: 18px;
-  background: rgba(240, 235, 215, .78);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-  transform: translateX(-50%) rotate(calc(var(--r) * -3));
-  clip-path: polygon(0 10%, 6% 0, 12% 12%, 18% 0, 100% 4%, 94% 100%, 88% 88%, 82% 100%, 0 92%);
-}
-.mtv__nav li:nth-child(3n + 2) a::before { left: 8px; transform: rotate(-35deg); }
-.mtv__nav li:nth-child(3n) a::before { left: auto; right: -16px; top: auto; bottom: -6px; transform: rotate(-40deg); }
-
 /* диагональная лента с бегущей строкой, как наклейка на кассете */
 .mtv__tape {
   position: absolute;
-  right: -10%;
-  bottom: 12%;
-  width: 70%;
+  left: -10%;
+  bottom: 18%;
+  width: 120%;
   display: flex;
   overflow: hidden;
   padding: 8px 0;
@@ -1347,11 +1331,11 @@ html:not(.mtv-open) .mtv * { transition-delay: 0s !important; transition-duratio
   font-size: clamp(12px, 1.1vw, 18px);
   letter-spacing: .12em;
   white-space: nowrap;
-  transform: rotate(-8deg) translateX(110%);
+  transform: rotate(-5deg) translateX(110%);
   transition: transform .5s cubic-bezier(.7, 0, .2, 1);
   box-shadow: 0 6px 0 #ff3ea5;
 }
-.mtv-open .mtv__tape { transform: rotate(-8deg); transition-delay: .7s; }
+.mtv-open .mtv__tape { transform: rotate(-5deg); transition-delay: .7s; }
 .mtv__tape span { flex: none; animation: tape 14s linear infinite; }
 @keyframes tape { to { transform: translateX(-100%); } }
 
@@ -1366,6 +1350,5 @@ html:not(.mtv-open) .mtv * { transition-delay: 0s !important; transition-duratio
 }
 
 @media (max-width: 1199px) {
-  .mtv__tape { width: 120%; right: -10%; bottom: 13%; }
-  .mtv__nav a::before { width: 40px; height: 14px; top: -9px; }
+  .mtv__tape { bottom: 12%; }
 }
