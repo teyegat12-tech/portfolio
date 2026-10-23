@@ -963,6 +963,8 @@ button.illu__more {
   .case__collage { align-self: start; }
   .case__desc { grid-column: 1 / -1; margin: calc(8 * var(--m)) 0 0; font-size: max(13px, calc(14 * var(--m))); }
   .case__side .btn { grid-column: 1 / -1; }
+  /* кейс без коллажа: телефон по центру */
+  .case--solo .case__phone { grid-column: 1 / -1; justify-self: center; width: 60% !important; }
   .case__cards { margin-top: calc(24 * var(--m)); }
   .case__cards li { flex: 0 0 calc(240 * var(--m)); scroll-snap-align: start; }
 
