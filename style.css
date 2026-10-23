@@ -471,7 +471,7 @@ a:hover { opacity: .6; }
 .more-row button { margin: 0 !important; background: none; color: inherit; font: inherit; font-size: max(12px, calc(20 * var(--u))); letter-spacing: 0.03em; text-transform: uppercase; cursor: pointer; }
 .more-row button[hidden] { display: none !important; }
 .more-row:not(:has(button:not([hidden]))) { display: none; }
-.cases__more-row { margin-top: calc(120 * var(--u)); }
+.cases__more-row { margin: calc(-180 * var(--u)) 0 calc(300 * var(--u)); } /* 120 от скринов, 300 до следующего раздела */
 button.logos__more {
   display: block;
   margin: calc(64 * var(--u)) auto 0;
@@ -1008,7 +1008,10 @@ button.illu__more {
   }
   .more-row { margin-top: calc(32 * var(--m)); gap: calc(12 * var(--m)); }
   .more-row button { font-size: max(13px, calc(14 * var(--m))); }
-  .cases__more-row { margin-top: calc(48 * var(--m)); }
+  .cases__more-row { margin: calc(-72 * var(--m)) calc(20 * var(--m)) calc(120 * var(--m)); }
+  /* на мобилке кнопки во всю ширину */
+  .more-row { flex-direction: column; }
+  .more-row button { width: 100%; padding: calc(12 * var(--m)) 0; }
 
   /* Контакты */
   .contacts { min-height: 0; padding-bottom: calc(60 * var(--m)); }
