@@ -13,6 +13,7 @@
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
+  <div class="glitch" aria-hidden="true"></div>
 
   <div class="sky" aria-hidden="true">
     <div class="sky__layer sky__layer--1"></div>
@@ -630,6 +631,30 @@
       };
       btn.addEventListener('click', () => { shown += STEP; render(); });
       render();
+    })();
+  </script>
+  <script>
+    // Помехи: изредка короткие полосы у левого или правого края
+    (() => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const box = document.querySelector('.glitch');
+      const r = (a, b) => a + Math.random() * (b - a);
+      const burst = () => {
+        const side = Math.random() < .5 ? 'left' : 'right';
+        const y0 = r(5, 90);
+        const n = Math.round(r(1, 4));
+        for (let k = 0; k < n; k++) {
+          const i = document.createElement('i');
+          if (Math.random() < .4) i.className = 'is-line';
+          const w = Math.min(innerWidth * .18, r(30, 220));
+          i.style.cssText = `${side}:${r(-10, 6)}px;top:${y0 + r(-3, 3)}vh;width:${w}px;height:${r(1, i.className ? 3 : 14)}px;` +
+            `--o:${r(.18, .5)};--dx:${r(-14, 14)}px;--t:${r(.14, .3)}s`;
+          box.appendChild(i);
+          i.addEventListener('animationend', () => i.remove());
+        }
+        setTimeout(burst, r(900, 3500));
+      };
+      setTimeout(burst, 1500);
     })();
   </script>
 </body>

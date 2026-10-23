@@ -1049,3 +1049,23 @@ a:hover { opacity: .6; }
   100% { transform: translate(0, 0); }
 }
 @media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
+
+/* ---------- Помехи по краям экрана (VHS-глитч) ---------- */
+.glitch { position: fixed; inset: 0; pointer-events: none; z-index: 51; overflow: hidden; }
+.glitch i {
+  position: absolute;
+  display: block;
+  background: url("assets/noise.png") 0 0 / 128px 128px repeat, rgba(205, 205, 205, .5);
+  background-blend-mode: multiply;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: glitch-blink var(--t, .22s) steps(3) forwards;
+}
+.glitch i.is-line { background: rgba(205, 205, 205, .55); }
+@keyframes glitch-blink {
+  0%   { opacity: var(--o, .5); transform: translateX(0); }
+  33%  { opacity: 0;            transform: translateX(var(--dx, 8px)); }
+  66%  { opacity: var(--o, .5); transform: translateX(calc(var(--dx, 8px) * -1)); }
+  100% { opacity: 0;            transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) { .glitch { display: none; } }
