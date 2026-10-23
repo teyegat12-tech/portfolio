@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nadezhda Korotkevich — graphic design, web design, UI/UX, illustration</title>
+  <meta name="description" content="Portfolio of Nadezhda Korotkevich: graphic design, web design, UI/UX, illustration and AI. 17+ years of experience.">
+  <meta name="theme-color" content="#101010">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="alternate" hreflang="ru" href="../">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="glitch" aria-hidden="true"></div>
+  <!-- Плавающее меню: квадратик справа сверху, раскрывается в MTV-стиле -->
+  <button class="fab" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mtv">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mtv" id="mtv" role="dialog" aria-modal="true" aria-label="Menu" inert>
+    <canvas class="mtv__static" aria-hidden="true"></canvas>
+    <div class="mtv__side mtv__side--l wave" aria-hidden="true"><i></i><i></i></div>
+    <div class="mtv__side mtv__side--r wave" aria-hidden="true"><i></i><i></i></div>
+    <div class="tv">
+      <div class="tv__bars wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="tv__label" aria-hidden="true">NO SIGNAL</p>
+      <nav class="mtv__nav" aria-label="Sections">
+        <ul>
+          <li style="--c:#f2f2f2;--i:0"><a href="#about"><span class="mtv__ch">CH 01</span>About</a></li>
+          <li style="--c:#f5e23a;--i:1"><a href="#experience"><span class="mtv__ch">CH 02</span>Experience</a></li>
+          <li style="--c:#4fe3e3;--i:2"><a href="#skills"><span class="mtv__ch">CH 03</span>Skills</a></li>
+          <li style="--c:#4fdf4f;--i:3"><a href="#clients"><span class="mtv__ch">CH 04</span>Clients</a></li>
+          <li style="--c:#e03fe0;--i:4"><a href="#level"><span class="mtv__ch">CH 05</span>Level 17+</a></li>
+          <li style="--c:#e23a3a;--i:5"><a href="#cases"><span class="mtv__ch">CH 06</span>Cases</a></li>
+          <li style="--c:#3a4cf0;--i:6"><a href="#illustrations"><span class="mtv__ch">CH 07</span>Illustrations</a></li>
+          <li style="--c:#f5e23a;--i:7"><a href="#logofolio"><span class="mtv__ch">CH 08</span>Logofolio</a></li>
+          <li style="--c:#4fe3e3;--i:8"><a href="#contacts"><span class="mtv__ch">CH 09</span>Contacts</a></li>
+        </ul>
+        <div class="mtv__extra"><a href="../cv/Korotkevich_Nadezhda_CV_EN.pdf" download>Download CV · PDF</a><a data-lang-switch href="../" hreflang="ru">RU</a></div>
+      </nav>
+      <div class="tv__pluge wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <p class="mtv__foot" aria-hidden="true">Nadezhda Korotkevich · ©2026</p>
+    <button class="mtv__close" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 9 31 31M31 9 9 31" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+    </button>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="tv-wave" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.001 0.022" numOctaves="1" seed="1"/>
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 .5  0 0 0 0 0  0 0 0 0 1"/>
+        <feDisplacementMap in="SourceGraphic" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
+  </div>
+
+
+  <div class="sky" aria-hidden="true">
+    <div class="sky__layer sky__layer--1"></div>
+    <div class="sky__layer sky__layer--1 sky__layer--echo"></div>
+    <div class="sky__layer sky__layer--2"></div>
+    <div class="sky__layer sky__layer--2 sky__layer--echo"></div>
+    <div class="sky__layer sky__layer--3"></div>
+    <div class="sky__layer sky__layer--3 sky__layer--echo"></div>
+    <div class="sky__layer sky__layer--4"></div>
+    <div class="sky__layer sky__layer--4 sky__layer--echo"></div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero__clouds" aria-hidden="true"></div>
+
+    <h1 class="hero__name">Nadezhda <br class="m-only">Korotkevich</h1>
+
+    <p class="hero__roles overline">Graphic design → Web design → UI/UX → Illustration → AI</p>
+
+
+    <nav class="hero__nav" id="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#level">Level 17+</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#illustrations">Illustrations</a></li>
+        <li><a href="#logofolio">Logofolio</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <p class="hero__year display" aria-hidden="true">©2026</p>
+    <p class="hero__lang"><a data-lang-switch href="../" hreflang="ru">RU</a> / <b>EN</b></p>
+
+  </header>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <img class="about__photo" src="../assets/photo.webp" width="1920" height="1478" alt="Nadezhda Korotkevich, portrait" decoding="async">
+
+    <h2 class="about__title display" id="about-title">Hello</h2>
+    <p class="about__tag overline">{ 2011-2026 }</p>
+
+    <div class="about__text">
+      <p>My name is Nadezhda.<br>I’m a designer and illustrator.</p>
+      <p class="about__facts">17+ years in the profession.<br>300+ delivered projects.<br>From startups to international companies.</p>
+      <p class="about__long">I work where systems thinking meets visual expression.<br>I design interfaces, create brand visuals and draw illustrations.<br>What matters to me is that design<br>is not only beautiful, but clear and practical.</p>
+    </div>
+
+    <img class="about__sign" src="../assets/signature.svg" width="369" height="256" alt="" aria-hidden="true">
+  </section>
+
+  <section class="sec exp" id="experience" aria-labelledby="exp-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="exp-title">Experience</h2>
+      <p class="sec__tag overline">{ 2011-2026 }</p>
+    </div>
+
+    <div class="exp__cols">
+      <ul class="exp__col">
+        <li class="job is-open">
+          <button class="job__head" type="button" aria-expanded="true">
+            <span class="job__company">LuckyGroup</span><span class="tag">RU</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">Dec 2024 — May 2026</p>
+          <p class="job__desc">Websites and landing pages, Tilda development. Identity and branding. Logo design. Graphic design and print. Presentations. Social media. Exhibition stands, full design support for conferences. Illustration, art photo retouching, AI tools and more.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">MoySklad</span><span class="tag">RU</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">Mar 2024 — Dec 2024</p>
+          <p class="job__desc">Product portal work, user research, landing pages. Social media, a new design concept, print, merch, exhibition stands, presentations and more.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">EFKO</span><span class="tag">RU</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">Jan 2023 — Mar 2024</p>
+          <p class="job__desc">Project-based work for one of the largest food companies in Russia.<br>Designed the concept of a branded subscription magazine for professional chefs and menus for several different restaurants. Drew all the illustrations and prepared materials for print.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">Ants Games</span><span class="tag">UAE</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">Mar 2022 — Dec 2022</p>
+          <p class="job__desc">Game interfaces, characters, backgrounds and UI elements. Social media and ad creatives.</p>
+        </li>
+      </ul>
+
+      <ul class="exp__col">
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">EmiDAO</span><span class="tag">UAE</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">2021–2022</p>
+          <p class="job__desc">Websites and landing pages. Concepts and illustrations for an NFT project. Stickers and social media.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">Rip Technologies</span><span class="tag">USA</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">2020–2021</p>
+          <p class="job__desc">Concepts and illustrations for posters and greeting cards. Prepress.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">TutMe</span><span class="tag">RU</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">2014–2020</p>
+          <p class="job__desc">Design concepts for corporate websites, e-commerce and landing pages, mobile apps. Prototyping. Illustration in different styles. Art retouching. Print and advertising design and prepress, packaging, prints and stickers. Image editing and retouching. Infographics. Presentations. Social media and more.</p>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__company">Bloomex</span><span class="tag">CA</span><span class="job__sep">//</span><span class="job__icon" aria-hidden="true"></span>
+          </button>
+          <p class="job__date">2011–2014</p>
+          <p class="job__desc">E-commerce and landing pages. Image editing and retouching. Packaging design. Infographics. Presentations. Print and advertising design and prepress.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec clients" id="clients" aria-labelledby="clients-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="clients-title">Freelance</h2>
+      <p class="sec__tag overline">{ Clients }</p>
+    </div>
+    <ul class="clients__grid">
+        <li><img src="../assets/clients/efko.svg" width="250" height="110" alt="EFKO" loading="lazy"></li>
+        <li><img src="../assets/clients/kaspersky.svg" width="250" height="110" alt="Kaspersky" loading="lazy"></li>
+        <li><img src="../assets/clients/skolkovo.svg" width="250" height="110" alt="Skolkovo" loading="lazy"></li>
+        <li><img src="../assets/clients/lukoil.svg" width="250" height="110" alt="Lukoil" loading="lazy"></li>
+        <li><img src="../assets/clients/pikabu.svg" width="250" height="110" alt="Pikabu" loading="lazy"></li>
+        <li><img src="../assets/clients/moysklad.svg" width="250" height="110" alt="MoySklad" loading="lazy"></li>
+        <li><img src="../assets/clients/rocketwork.svg" width="250" height="110" alt="Rocket Work" loading="lazy"></li>
+        <li><img src="../assets/clients/luckygroup.svg" width="250" height="110" alt="Lucky Group" loading="lazy"></li>
+        <li><img src="../assets/clients/rosneft.svg" width="250" height="110" alt="Rosneft" loading="lazy"></li>
+        <li><img src="../assets/clients/nlmk.svg" width="250" height="110" alt="NLMK" loading="lazy"></li>
+        <li><img src="../assets/clients/gazprom.svg" width="250" height="110" alt="Gazprom" loading="lazy"></li>
+        <li><img src="../assets/clients/lego.svg" width="250" height="110" alt="LEGO" loading="lazy"></li>
+    </ul>
+  </section>
+
+  <section class="sec soft" id="soft" aria-labelledby="soft-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="soft-title">Software</h2>
+      <p class="sec__tag overline"><span class="d-only">{ Tools I work with }</span><span class="m-only">{ Tools }</span></p>
+    </div>
+    <div class="soft__panels">
+      <div class="soft__panel">
+        <h3 class="soft__title">Core</h3>
+        <ul class="soft__row">
+          <li class="tool"><img src="../assets/soft/figma.svg" width="110" height="110" alt="" loading="lazy"><span>Figma</span></li>
+          <li class="tool"><img src="../assets/soft/photoshop.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe Photoshop</span></li>
+          <li class="tool"><img src="../assets/soft/illustrator.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe Illustrator</span></li>
+          <li class="tool"><img src="../assets/soft/lightroom.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe Lightroom</span></li>
+          <li class="tool"><img src="../assets/soft/acrobat.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe Acrobat</span></li>
+          <li class="tool"><img src="../assets/soft/tilda.svg" width="110" height="110" alt="" loading="lazy"><span>Tilda</span></li>
+          <li class="tool"><img src="../assets/soft/procreate.svg" width="110" height="110" alt="" loading="lazy"><span>Procreate</span></li>
+        </ul>
+        <div class="soft__bar" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="soft__panel">
+        <h3 class="soft__title">AI tools</h3>
+        <ul class="soft__row">
+          <li class="tool"><img src="../assets/soft/chatgpt.svg" width="110" height="110" alt="" loading="lazy"><span>ChatGPT</span></li>
+          <li class="tool"><img src="../assets/soft/lovable.svg" width="110" height="110" alt="" loading="lazy"><span>Lovable</span></li>
+          <li class="tool"><img src="../assets/soft/higgsfield.svg" width="110" height="110" alt="" loading="lazy"><span>Higgsfield</span></li>
+          <li class="tool"><img src="../assets/soft/suno.svg" width="110" height="110" alt="" loading="lazy"><span>Suno</span></li>
+          <li class="tool"><img src="../assets/soft/codex.svg" width="110" height="110" alt="" loading="lazy"><span>Codex</span></li>
+          <li class="tool"><img src="../assets/soft/claude.svg" width="110" height="110" alt="" loading="lazy"><span>Claude</span></li>
+          <li class="tool"><img src="../assets/soft/krea.svg" width="110" height="110" alt="" loading="lazy"><span>Krea</span></li>
+          <li class="tool"><img src="../assets/soft/recraft.svg" width="110" height="110" alt="" loading="lazy"><span>Recraft</span></li>
+          <li class="tool"><img src="../assets/soft/kling.svg" width="110" height="110" alt="" loading="lazy"><span>Kling</span></li>
+          <li class="tool"><img src="../assets/soft/runway.svg" width="110" height="110" alt="" loading="lazy"><span>Runway</span></li>
+          <li class="tool"><img src="../assets/soft/midjourney.svg" width="110" height="110" alt="" loading="lazy"><span>Midjourney</span></li>
+          <li class="tool"><img src="../assets/soft/nanobanana.svg" width="110" height="110" alt="" loading="lazy"><span>Nano Banana</span></li>
+        </ul>
+        <div class="soft__bar" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="soft__panel">
+        <h3 class="soft__title">Other</h3>
+        <ul class="soft__row">
+          <li class="tool"><img src="../assets/soft/github.svg" width="110" height="110" alt="" loading="lazy"><span>GitHub</span></li>
+          <li class="tool"><img src="../assets/soft/supabase.svg" width="110" height="110" alt="" loading="lazy"><span>Supabase</span></li>
+          <li class="tool"><img src="../assets/soft/vercel.svg" width="110" height="110" alt="" loading="lazy"><span>Vercel</span></li>
+          <li class="tool"><img src="../assets/soft/obsidian.svg" width="110" height="110" alt="" loading="lazy"><span>Obsidian</span></li>
+          <li class="tool"><img src="../assets/soft/miro.svg" width="110" height="110" alt="" loading="lazy"><span>Miro</span></li>
+          <li class="tool"><img src="../assets/soft/procreate-dreams.svg" width="110" height="110" alt="" loading="lazy"><span>Procreate Dreams</span></li>
+          <li class="tool"><img src="../assets/soft/capcut.svg" width="110" height="110" alt="" loading="lazy"><span>CapCut</span></li>
+          <li class="tool"><img src="../assets/soft/wix.svg" width="110" height="110" alt="" loading="lazy"><span>WIX</span></li>
+          <li class="tool"><img src="../assets/soft/fresco.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe Fresco</span></li>
+          <li class="tool"><img src="../assets/soft/indesign.svg" width="110" height="110" alt="" loading="lazy"><span>Adobe InDesign</span></li>
+          <li class="tool"><img src="../assets/soft/keynote.svg" width="110" height="110" alt="" loading="lazy"><span>Keynote</span></li>
+          <li class="tool"><img src="../assets/soft/coreldraw.svg" width="110" height="110" alt="" loading="lazy"><span>CorelDRAW</span></li>
+          <li class="tool"><img src="../assets/soft/bazaart.svg" width="110" height="110" alt="" loading="lazy"><span>Bazaart</span></li>
+          <li class="tool"><img src="../assets/soft/google-slides.svg" width="110" height="110" alt="" loading="lazy"><span>Google Slides</span></li>
+          <li class="tool"><img src="../assets/soft/google-sheets.svg" width="110" height="110" alt="" loading="lazy"><span>Google Sheets</span></li>
+          <li class="tool"><img src="../assets/soft/powerpoint.svg" width="110" height="110" alt="" loading="lazy"><span>Microsoft PowerPoint</span></li>
+          <li class="tool"><img src="../assets/soft/excel.svg" width="110" height="110" alt="" loading="lazy"><span>Microsoft Excel</span></li>
+          <li class="tool"><img src="../assets/soft/culebras.svg" width="110" height="110" alt="" loading="lazy"><span>Culebras Control Sensor</span></li>
+        </ul>
+        <div class="soft__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec skills" id="skills" aria-labelledby="skills-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="skills-title">Skills</h2>
+      <p class="sec__tag overline">{ Skills }</p>
+    </div>
+    <div class="skills__track" tabindex="0" aria-label="Skills, scroll sideways">
+        <ol class="skills__col skills__col--left">
+          <li class="skill"><span class="skill__num">01</span><p class="skill__title">Design from&nbsp;UI to&nbsp;print</p><p class="skill__desc">UI/UX, websites, branding, illustration and print. 200+ <span class="nw">design concepts</span>, hundreds of logos and brand identities.</p></li>
+          <li class="skill"><span class="skill__num">02</span><p class="skill__title">Design education</p><p class="skill__desc">Graduated from TRTU (now SFedU). Degree: <span class="nw">design engineer</span>.</p></li>
+          <li class="skill"><span class="skill__num">03</span><p class="skill__title">6+ years in&nbsp;an IT studio</p><p class="skill__desc">I know the process from the inside and work closely with developers&nbsp;— from idea to launch.</p></li>
+          <li class="skill"><span class="skill__num">04</span><p class="skill__title">International experience</p><p class="skill__desc">3+ years on-site at a Canadian company in an English-speaking team. Long-term remote work with companies abroad.</p></li>
+        </ol>
+        <ol class="skills__col skills__col--right" start="5">
+          <li class="skill"><span class="skill__num">05</span><p class="skill__title">Leadership and&nbsp;mentoring</p><p class="skill__desc">For 2 years I led a team of five designers: assigned tasks, negotiated and delivered projects. I help junior designers grow.</p></li>
+          <li class="skill"><span class="skill__num">06</span><p class="skill__title">Ownership and&nbsp;deadlines</p><p class="skill__desc">Extensive freelance experience. I get up to speed fast, plan my workload and see projects through.</p></li>
+          <li class="skill"><span class="skill__num">07</span><p class="skill__title">Vibe coding</p><p class="skill__desc">I build websites and interactive tools with AI, combining design and code to turn ideas into working products.</p></li>
+          <li class="skill"><span class="skill__num">08</span><p class="skill__title">AI and&nbsp;automation</p><p class="skill__desc">I build <span class="nw">AI assistants</span> and automate workflows. I use neural networks for image and video generation and retouching.</p></li>
+        </ol>
+    </div>
+    <div class="skills__nav">
+      <button class="skills__arrow" type="button" data-dir="-1" aria-label="Previous skill">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M13 7H1M6 2 1 7l5 5" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+      </button>
+      <button class="skills__arrow" type="button" data-dir="1" aria-label="Next skill">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="sec upgrade" id="upgrade" aria-labelledby="upgrade-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="upgrade-title">Upgrade</h2>
+      <p class="sec__tag overline"><span class="d-only">{ Certificates and proven expertise }</span><span class="m-only">{ Certificates }</span></p>
+    </div>
+    <div class="certs" aria-label="Certificates">
+      <figure class="cert">
+        <img src="../assets/certs/ai-expert.webp" width="324" height="460" alt="Certificate: AI Expert" loading="lazy">
+        <figcaption><p class="cert__title">AI Expert</p><p class="cert__desc">Visual and video generation, advanced prompt engineering, AI in design and marketing, building GPT assistants, content strategy and workflow automation.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/composition.webp" width="342" height="460" alt="Certificate: Experimental composition" loading="lazy">
+        <figcaption><p class="cert__title">Experimental composition</p><p class="cert__desc">Dynamics and statics, contrast and rhythm, form and format, grouping, building a coherent image and developing concepts through visual metaphor.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/typography.webp" width="353" height="460" alt="Certificate: Applied typography" loading="lazy">
+        <figcaption><p class="cert__title">Applied typography</p><p class="cert__desc">Page composition and architecture, format and visual hierarchy, structuring large amounts of text, careful typesetting, choosing and pairing typefaces to fit the project.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/interaction.webp" width="328" height="460" alt="Certificate: Interaction design" loading="lazy">
+        <figcaption><p class="cert__title">Interaction design</p><p class="cert__desc">Micro- and macro-interactions, navigation models and information architecture, user scenarios, responsive and seamless interaction, animation as a tool for navigation and attention.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/web-design.webp" width="324" height="458" alt="Certificate: Web design" loading="lazy">
+        <figcaption><p class="cert__title">Web design</p><p class="cert__desc">Audience research, user scenarios, prototyping, systematic work with composition and typography, grids and modular structure, responsive and interactive layout.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/tilda-school.webp" width="324" height="458" alt="Certificate: Tilda School" loading="lazy">
+        <figcaption><p class="cert__title">Tilda School</p><p class="cert__desc">Designing and building websites of any complexity, Zero Block and custom grids, animation and interactivity, responsiveness, integrations and launch preparation.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/creative-layout.webp" width="324" height="458" alt="Certificate: Creative layout and animation" loading="lazy">
+        <figcaption><p class="cert__title">Creative layout and&nbsp;animation</p><p class="cert__desc">Page composition and architecture, format and visual hierarchy, structuring large amounts of text, careful typesetting, choosing and pairing typefaces to fit the project.</p></figcaption>
+      </figure>
+      <figure class="cert">
+        <img src="../assets/certs/western-clients.webp" width="324" height="458" alt="Certificate: Working with Western clients" loading="lazy">
+        <figcaption><p class="cert__title">Working with&nbsp;Western clients</p><p class="cert__desc">Business communication and briefing at an international level, meeting deadlines and quality standards, structuring processes, defending decisions, working under contracts and clear business requirements.</p></figcaption>
+      </figure>
+    </div>
+    <div class="certs__caption" aria-live="polite"></div>
+    <p class="certs__hint">tap the stack to flip through</p>
+  </section>
+
+  <div class="cases" id="cases">
+    <section class="sec case case--app" id="case-1" aria-labelledby="case1-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case1-title">Case #1</h2>
+        <p class="sec__tag overline">{ Mini-app PULS }</p>
+      </div>
+      <div class="case__app">
+        <ul class="case__phones">
+        <li><img src="../assets/cases/case1-phone-1.webp" width="212" height="466" alt="Puls, screen 1" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-2.webp" width="212" height="466" alt="Puls, screen 2" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-3.webp" width="212" height="466" alt="Puls, screen 3" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-4.webp" width="212" height="466" alt="Puls, screen 4" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-5.webp" width="212" height="466" alt="Puls, screen 5" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-6.webp" width="212" height="466" alt="Puls, screen 6" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-7.webp" width="212" height="466" alt="Puls, screen 7" loading="lazy"></li>
+        <li><img src="../assets/cases/case1-phone-8.webp" width="212" height="466" alt="Puls, screen 8" loading="lazy"></li>
+        </ul>
+        <div class="case__app-info">
+          <p class="case__app-desc">AI-powered news mini app.<br>Project from Sergey Gurov’s «NewLVL 180°» course<br>Research, design, responsive, <span class="nw">AI visuals</span></p>
+          <a class="btn" href="https://claude.ai/artifact/TF28bd89AThMX5VaNzPmzE" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h23M18 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="sec case" id="case-2" aria-labelledby="case2-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case2-title">Case #2</h2>
+        <p class="sec__tag overline">{ Website, social media, merch, venue design }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case2-main.webp" width="979" height="749" alt="CPA LiFE FEST: website home screen" loading="lazy">
+        <img class="case__phone" src="../assets/cases/case2-phone.webp" width="300" height="599" alt="CPA LiFE FEST: mobile version" loading="lazy">
+        <div class="case__side">
+          <img class="case__collage" src="../assets/cases/case2-collage.webp" width="380" height="525" alt="CPA LiFE FEST: social media and print" loading="lazy">
+          <p class="case__desc">Full design support for a festival. Concept. Branding. Social media. Presentations for partners and participants. Merch. Advertising materials. Venue map.</p>
+          <a class="btn" href="https://cpa-life.info/page64443571.html" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h23M18 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case2-card-1.webp" width="560" height="866" alt="CPA LiFE FEST: layout 1" loading="lazy"></li>
+        <li><img src="../assets/cases/case2-card-2.webp" width="560" height="866" alt="CPA LiFE FEST: layout 2" loading="lazy"></li>
+        <li><img src="../assets/cases/case2-card-3.webp" width="560" height="866" alt="CPA LiFE FEST: layout 3" loading="lazy"></li>
+      </ul>
+    </section>
+    <section class="sec case case--nophone" id="case-3" aria-labelledby="case3-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case3-title">Case #3</h2>
+        <p class="sec__tag overline">{ Longread, illustration, design }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case6-main.webp" width="979" height="749" alt="Longread «Robert Saakyants and his fairy-tale worlds»: first screen" loading="lazy">
+        <div class="case__side">
+          <img class="case__collage" src="../assets/cases/case6-collage.webp" width="380" height="525" alt="Longread about Robert Saakyants: hand-drawn scenes" loading="lazy">
+          <p class="case__desc">A longread about animator Robert Saakyants. The whole site is hand-drawn from scratch&nbsp;— every character, background and detail. In progress: scene animation and the mobile version.</p>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case6-card-1.webp" width="560" height="730" alt="Longread: «The hippie who became a great animator»" loading="lazy"></li>
+        <li><img src="../assets/cases/case6-card-2.webp" width="560" height="730" alt="Longread: «In the blue sea, in the white foam…»" loading="lazy"></li>
+        <li><img src="../assets/cases/case6-card-3.webp" width="560" height="730" alt="Longread: «Oh my, Maslenitsa!»" loading="lazy"></li>
+      </ul>
+    </section>
+    <section class="sec case" id="case-4" aria-labelledby="case4-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case4-title">Case #4</h2>
+        <p class="sec__tag overline">{ Logo, website, identity, social media, merch }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case3-main.webp" width="979" height="749" alt="LuckyCards: website home screen" loading="lazy">
+        <img class="case__phone" src="../assets/cases/case3-phone.webp" width="300" height="599" alt="LuckyCards: mobile version" loading="lazy">
+        <div class="case__side">
+          <img class="case__collage" src="../assets/cases/case3-collage.webp" width="380" height="525" alt="LuckyCards: social media and print" loading="lazy">
+          <p class="case__desc">Logo and identity design. Bank card design. Social media.</p>
+          <a class="btn" href="https://luckycards.io/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h23M18 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case3-card-1.webp" width="560" height="866" alt="LuckyCards: layout 1" loading="lazy"></li>
+        <li><img src="../assets/cases/case3-card-2.webp" width="560" height="866" alt="LuckyCards: layout 2" loading="lazy"></li>
+        <li><img src="../assets/cases/case3-card-3.webp" width="560" height="866" alt="LuckyCards: layout 3" loading="lazy"></li>
+      </ul>
+    </section>
+    <section class="sec case" id="case-5" aria-labelledby="case5-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case5-title">Case #5</h2>
+        <p class="sec__tag overline">{ Logo, website, identity, social media, merch }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case4-main.webp" width="979" height="749" alt="LuckyOnline: website home screen" loading="lazy">
+        <img class="case__phone" src="../assets/cases/case4-phone.webp" width="300" height="599" alt="LuckyOnline: mobile version" loading="lazy">
+        <div class="case__side">
+          <img class="case__collage" src="../assets/cases/case4-collage.webp" width="380" height="525" alt="LuckyOnline: social media and print" loading="lazy">
+          <p class="case__desc">Social media. Presentations. Merch. Advertising materials. Design support for conferences, exhibition stands.</p>
+          <a class="btn" href="https://project13610873.tilda.ws/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h23M18 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case4-card-1.webp" width="560" height="866" alt="LuckyOnline: layout 1" loading="lazy"></li>
+        <li><img src="../assets/cases/case4-card-2.webp" width="560" height="866" alt="LuckyOnline: layout 2" loading="lazy"></li>
+        <li><img src="../assets/cases/case4-card-3.webp" width="560" height="866" alt="LuckyOnline: layout 3" loading="lazy"></li>
+      </ul>
+    </section>
+    <section class="sec case case--solo" id="case-6" aria-labelledby="case6-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case6-title">Case #6</h2>
+        <p class="sec__tag overline">{ Landing page redesign, UI/UX, responsive, <span class="nw">3D visuals</span> }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case5-main.webp" width="979" height="749" alt="MoySklad: landing home screen" loading="lazy">
+        <img class="case__phone" src="../assets/cases/case5-phone.webp" width="300" height="599" alt="MoySklad: mobile version" loading="lazy">
+        <div class="case__side">
+          <p class="case__desc">Redesign of the MoySklad home page&nbsp;— a cloud service for retail, inventory and CRM. New structure and interface, responsive for all screens, <span class="nw">3D visuals</span>.</p>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case5-card-1.webp" width="560" height="866" alt="MoySklad: audiences and free plan sections" loading="lazy"></li>
+        <li><img src="../assets/cases/case5-card-2.webp" width="560" height="866" alt="MoySklad: reviews and benefits" loading="lazy"></li>
+        <li><img src="../assets/cases/case5-card-3.webp" width="560" height="866" alt="MoySklad: integrations and mobile app" loading="lazy"></li>
+      </ul>
+    </section>
+    <section class="sec case" id="case-7" aria-labelledby="case7-title">
+      <div class="sec__head">
+        <h2 class="sec__title" id="case7-title">Case #7</h2>
+        <p class="sec__tag overline">{ Logo, landing page, UI/UX, responsive }</p>
+      </div>
+      <div class="case__stage">
+        <img class="case__main" src="../assets/cases/case7-main.webp" width="979" height="749" alt="Legkiy Shag: landing home screen" loading="lazy">
+        <img class="case__phone" src="../assets/cases/case7-phone.webp" width="300" height="599" alt="Legkiy Shag: responsive version" loading="lazy">
+        <div class="case__side">
+          <img class="case__collage" src="../assets/cases/case7-collage.webp" width="380" height="525" alt="Legkiy Shag: staircase price calculator" loading="lazy">
+          <p class="case__desc">Landing page for «Legkiy Shag», a company that designs, builds and installs staircases. Logo, site structure and design, price calculator, tablet layout.</p>
+        </div>
+      </div>
+      <ul class="case__cards">
+        <li><img src="../assets/cases/case7-card-1.webp" width="560" height="866" alt="Legkiy Shag: benefits, about, services" loading="lazy"></li>
+        <li><img src="../assets/cases/case7-card-2.webp" width="560" height="866" alt="Legkiy Shag: FAQ" loading="lazy"></li>
+        <li><img src="../assets/cases/case7-card-3.webp" width="560" height="866" alt="Legkiy Shag: form, Instagram and contacts" loading="lazy"></li>
+      </ul>
+    </section>
+  </div>
+  <div class="more-row cases__more-row"><button class="tag-link cases__more" type="button" hidden>Show more cases</button><button class="tag-link cases__less" type="button" hidden>Hide</button></div>
+
+  <section class="sec illu" id="illustrations" aria-labelledby="illu-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="illu-title">Illustrations</h2>
+    </div>
+    <ul class="illu__grid">
+      <li><img src="../assets/illu/illu-01.webp" width="680" height="680" alt="Illustration: Crab among lotus leaves" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-02.webp" width="680" height="680" alt="Illustration: Girl with flowers in her hair" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-03.webp" width="680" height="680" alt="Illustration: Man with a katana among cherry blossoms" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-04.webp" width="680" height="680" alt="Illustration: Peonies" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-05.webp" width="680" height="680" alt="Illustration: Basketball player with a ball" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-06.webp" width="680" height="680" alt="Illustration: Feet out of a car window against the clouds" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-07.webp" width="680" height="680" alt="Illustration: «Let’s Do This»" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-08.webp" width="680" height="680" alt="Illustration: Portrait of a man in a cap" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-09.webp" width="680" height="680" alt="Illustration: Neon face" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-10.webp" width="680" height="680" alt="Illustration: Girl with noodles and an octopus" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-11.webp" width="680" height="680" alt="Illustration: Girl in graffiti style" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-12.webp" width="680" height="680" alt="Illustration: Portrait with the Funky Business board game" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-13.webp" width="680" height="680" alt="Illustration: Retro cartoon scene" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-14.webp" width="680" height="680" alt="Illustration: Skeleton and lady: retro cartoon" loading="lazy"></li>
+      <li><img src="../assets/illu/illu-15.webp" width="680" height="680" alt="Illustration: Bulldozer and a police car" loading="lazy"></li>
+    </ul>
+    <div class="soft__bar illu__bar" aria-hidden="true"><span></span></div>
+    <div class="more-row illu__more-row"><button class="tag-link illu__more" type="button" hidden>Show more</button><button class="tag-link illu__less" type="button" hidden>Hide</button></div>
+  </section>
+
+  <section class="sec logos" id="logofolio" aria-labelledby="logos-title">
+    <div class="sec__head">
+      <h2 class="sec__title" id="logos-title">Logo</h2>
+      <p class="sec__tag overline">{ Logofolio }</p>
+    </div>
+    <ul class="logos__grid">
+      <li><img src="../assets/logos/logo-01.svg" width="180" height="130" alt="Lucky Cards" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-02.svg" width="180" height="130" alt="Supply" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-03.svg" width="180" height="130" alt="Prive" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-04.svg" width="180" height="130" alt="Furshet Master" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-05.svg" width="180" height="130" alt="NEFT" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-06.svg" width="180" height="130" alt="«19» logo" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-07.svg" width="180" height="130" alt="GröoMaster" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-08.svg" width="180" height="130" alt="Sphera" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-09.svg" width="180" height="130" alt="Pride" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-10.svg" width="180" height="130" alt="Pretty Little London" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-11.svg" width="180" height="130" alt="SmartCast Equipment" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-12.svg" width="180" height="130" alt="Chicago 1930" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-13.svg" width="180" height="130" alt="Logo" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-14.svg" width="180" height="130" alt="T.U.S.A." loading="lazy"></li>
+      <li><img src="../assets/logos/logo-15.svg" width="180" height="130" alt="Svoy Interior" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-16.svg" width="180" height="130" alt="Rezh i Esh" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-17.svg" width="180" height="130" alt="Horizon Systems" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-shag.svg" width="180" height="130" alt="Legkiy Shag" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-little-star.svg" width="180" height="130" alt="Little Star" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-18.svg" width="180" height="130" alt="Recore" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-19.svg" width="180" height="130" alt="Viona" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-20.svg" width="180" height="130" alt="Emfil" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-21.svg" width="180" height="130" alt="Browlife" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-22.svg" width="180" height="130" alt="Atmosphere" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-23.svg" width="180" height="130" alt="Royal Cedar" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-24.svg" width="180" height="130" alt="Morin" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-25.svg" width="180" height="130" alt="Pure Essence" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-26.svg" width="180" height="130" alt="Monologues" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-27.svg" width="180" height="130" alt="Aqua-Well" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-28.svg" width="180" height="130" alt="A2 Seven" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-29.svg" width="180" height="130" alt="Banka" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-30.svg" width="180" height="130" alt="Evrostroy" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-31.svg" width="180" height="130" alt="Alarm.ru" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-32.svg" width="180" height="130" alt="DentTravel" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-33.svg" width="180" height="130" alt="Qing Feng" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-34.svg" width="180" height="130" alt="Sever sports school" loading="lazy"></li>
+      <li><img src="../assets/logos/logo-35.svg" width="180" height="130" alt="Monogram" loading="lazy"></li>
+    </ul>
+    <div class="more-row"><button class="tag-link logos__more" type="button" hidden>Show more</button><button class="tag-link logos__less" type="button" hidden>Hide</button></div>
+  </section>
+
+  <section class="sec contacts" id="contacts" aria-labelledby="contacts-title">
+    <h2 class="contacts__title display" id="contacts-title">Thank you for&nbsp;your attention</h2>
+
+    <div class="contacts__body">
+      <p class="contacts__intro overline">If you’re interested in working together, I’m always happy to talk and discuss the details.</p>
+      <p class="contacts__note overline">Recent work samples are available on request.</p>
+      <div class="contacts__row">
+        <p class="contacts__chip">Contacts</p>
+        <ul class="contacts__list overline">
+          <li><a href="mailto:teyega@mail.ru"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>teyega@mail.ru</span></a></li>
+          <li><a href="https://t.me/nadenka_nadushca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M5.5 11.6 17 7.2c.5-.2 1 .1.8.9l-2 9.3c-.1.6-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5.1c.2-.2 0-.3-.4-.1l-6.9 4.4-3-.9c-.6-.2-.6-.6.3-.9z" fill="#101010"/></svg><span>@nadenka_nadushca</span></a></li>
+          <li><a href="https://www.instagram.com/nadenka_nadushca/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="#101010" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="#101010"/></svg><span>@nadenka_nadushca</span></a></li>
+          <li><a href="https://wa.me/79821886114" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5A10.5 10.5 0 0 0 2.9 17.3L1.5 22.5l5.3-1.4A10.5 10.5 0 1 0 12 1.5z" fill="currentColor"/><path transform="translate(6.6 6.6) scale(.45)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#101010"/></svg><span>+7 (982) 188-61-14</span></a></li>
+        </ul>
+      </div>
+      <a class="btn contacts__cv" href="../cv/Korotkevich_Nadezhda_CV_EN.pdf" download>Download CV · PDF <svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h23M18 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+    </div>
+
+    <div class="contacts__old">
+      <p class="overline">Older public work can be found here:</p>
+      <ul>
+        <li><a class="tag-link overline" href="https://teyega4.wixsite.com/mysite" target="_blank" rel="noopener">Wix</a></li>
+        <li><a class="tag-link overline" href="https://www.behance.net/nadenka_nadushka" target="_blank" rel="noopener">Behance</a></li>
+        <li><a class="tag-link overline" href="https://teyega09c3.myportfolio.com/" target="_blank" rel="noopener">Adobe</a></li>
+        <li><a class="tag-link overline" href="https://app.notion.com/p/fb2f3cdc53274b978294357d6f0ba492" target="_blank" rel="noopener">Notion</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    // Experience: аккордеон только на мобилке, на десктопе всё раскрыто
+    const isDesktop = () => matchMedia('(min-width: 1200px)').matches;
+    document.querySelectorAll('.job__head').forEach(head => {
+      head.addEventListener('click', () => {
+        if (isDesktop()) return;
+        const job = head.closest('.job');
+        const open = job.classList.toggle('is-open');
+        head.setAttribute('aria-expanded', open);
+      });
+    });
+  </script>
+
+  <script>
+    // Software: индикатор горизонтальной прокрутки на мобилке
+    document.querySelectorAll('.soft__panel').forEach(panel => {
+      const row = panel.querySelector('.soft__row');
+      const thumb = panel.querySelector('.soft__bar span');
+      const upd = () => {
+        const max = row.scrollWidth - row.clientWidth;
+        panel.classList.toggle('no-scroll', max <= 1);
+        const vis = row.clientWidth / row.scrollWidth;
+        thumb.style.width = (vis * 100) + '%';
+        thumb.style.transform = 'translateX(' + (max > 0 ? row.scrollLeft / max * (1 / vis - 1) * 100 : 0) + '%)';
+      };
+      row.addEventListener('scroll', upd, { passive: true });
+      addEventListener('resize', upd);
+      addEventListener('load', upd);
+      upd();
+    });
+  </script>
+
+  <script>
+    // Skills: карусель на мобилке
+    (() => {
+      const track = document.querySelector('.skills__track');
+      const arrows = document.querySelectorAll('.skills__arrow');
+      const upd = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        arrows[0].disabled = track.scrollLeft <= 2;
+        arrows[1].disabled = track.scrollLeft >= max - 2;
+      };
+      arrows.forEach(a => a.addEventListener('click', () => {
+        track.scrollBy({ left: track.clientWidth * +a.dataset.dir, behavior: 'smooth' });
+      }));
+      track.addEventListener('scroll', upd, { passive: true });
+      addEventListener('resize', upd);
+      upd();
+    })();
+  </script>
+
+  <script>
+    // Upgrade: на мобилке сертификаты падают стопкой, по нажатию листаются
+    (() => {
+      const box = document.querySelector('.certs');
+      const cards = [...box.querySelectorAll('.cert')];
+      const cap = document.querySelector('.certs__caption');
+      const rot = [-6, 5, -3, 8, -8, 3, -4, 7];
+      const dx  = [-6, 9, -10, 5, -3, 10, -8, 4];
+      const dy  = [4, -6, 2, -4, 6, -2, 5, 0];
+      const n = cards.length;
+      let order = cards.map((_, i) => i); // order[0] — верхняя карточка
+      cards.forEach((c, i) => {
+        c.style.setProperty('--r', rot[i % 8] + 'deg');
+        c.style.setProperty('--x', dx[i % 8]);
+        c.style.setProperty('--y', dy[i % 8]);
+        c.style.setProperty('--d', ((n - 1 - i) * 0.12) + 's');
+      });
+      const paint = () => {
+        order.forEach((ci, pos) => { cards[ci].style.zIndex = n - pos; });
+        cap.innerHTML = cards[order[0]].querySelector('figcaption').innerHTML;
+      };
+      paint();
+      const drop = () => {
+        box.classList.add('is-dropped');
+        setTimeout(() => box.classList.add('is-ready'), (n * 0.12 + 0.6) * 1000);
+      };
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => {
+          if (es.some(e => e.isIntersecting)) { drop(); io.disconnect(); }
+        }, { threshold: 0.35 });
+        io.observe(box);
+      } else drop();
+      let busy = false;
+      box.addEventListener('click', () => {
+        if (matchMedia('(min-width: 1200px)').matches || busy || !box.classList.contains('is-ready')) return;
+        busy = true;
+        const top = cards[order[0]];
+        top.classList.add('is-flying');
+        setTimeout(() => {
+          order.push(order.shift());
+          top.classList.remove('is-flying');
+          paint();
+          busy = false;
+        }, 380);
+      });
+    })();
+  </script>
+
+  <script>
+    // Illustrations: индикатор слайдера на мобилке
+    (() => {
+      const row = document.querySelector('.illu__grid');
+      const thumb = document.querySelector('.illu__bar span');
+      const upd = () => {
+        const max = row.scrollWidth - row.clientWidth;
+        const vis = row.clientWidth / row.scrollWidth;
+        thumb.style.width = (vis * 100) + '%';
+        thumb.style.transform = 'translateX(' + (max > 0 ? row.scrollLeft / max * (1 / vis - 1) * 100 : 0) + '%)';
+      };
+      row.addEventListener('scroll', upd, { passive: true });
+      addEventListener('resize', upd); addEventListener('load', upd); upd();
+    })();
+  </script>
+
+  <script>
+    // Облака в «Контактах»: слой неба привязан к положению блока
+    (() => {
+      const sky = document.querySelector('.sky');
+      const sec = document.getElementById('contacts');
+      const set = () => sky.style.setProperty('--contacts-top', sec.offsetTop + 'px');
+      set(); addEventListener('load', set); addEventListener('resize', set);
+      if ('ResizeObserver' in window) new ResizeObserver(set).observe(document.body);
+    })();
+  </script>
+
+  <script>
+    // Illustrations: на десктопе показываем по 10, остальное по кнопке
+    (() => {
+      const STEP = 10;
+      const items = [...document.querySelectorAll('.illu__grid li')];
+      const btn = document.querySelector('.illu__more');
+      const less = document.querySelector('.illu__less');
+      let shown = STEP;
+      const render = () => {
+        items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
+        btn.hidden = shown >= items.length;
+        less.hidden = shown <= STEP;
+      };
+      btn.addEventListener('click', () => { shown += STEP; render(); });
+      less.addEventListener('click', () => {
+        shown = STEP; render();
+        document.getElementById('illustrations').scrollIntoView({ behavior: 'smooth' });
+      });
+      render();
+    })();
+  </script>
+  <script>
+    // Помехи у краёв + иногда весь screen вздрагивает.
+    // Варианты: ?glitch=a — кассета, b — телевизор (по умолчанию), c — мягкий (без вздрагивания)
+    (() => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const mode = (new URLSearchParams(location.search).get('glitch') || 'b').toLowerCase();
+      const box = document.querySelector('.glitch');
+      const root = document.documentElement;
+      const r = (a, b) => a + Math.random() * (b - a);
+      const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+      const spawn = (side, y, cls, w, hgt, extra = '') => {
+        const i = document.createElement('i');
+        i.className = cls;
+        i.style.cssText = `${side}:${r(-10, 6)}px;top:${y}vh;width:${w}px;height:${hgt}px;` +
+          `--o:${r(.3, .7)};--dx:${r(-16, 16)}px;--s:${r(2, 6)}px;--t:${r(.14, .3)}s;` + extra;
+        box.appendChild(i);
+        i.addEventListener('animationend', () => i.remove());
+      };
+      const burst = () => {
+        const side = Math.random() < .5 ? 'left' : 'right';
+        const y0 = r(5, 90);
+        const n = Math.round(r(1, 4));
+        for (let k = 0; k < n; k++) {
+          const cls = pick(['is-bar', 'is-bar', 'is-line', 'is-red', 'is-cyan']);
+          const thin = cls !== 'is-bar';
+          spawn(side, y0 + r(-3, 3), cls, Math.min(innerWidth * .2, r(30, 240)), thin ? r(1, 3) : r(4, 16));
+        }
+        setTimeout(burst, r(900, 3200));
+      };
+      const jolt = () => {
+        root.style.setProperty('--jx', `${r(-8, 8).toFixed(1)}px`);
+        root.classList.add('is-jolt');
+        root.dispatchEvent(new Event('jolt'));
+        if (mode === 'b') {
+          root.classList.add('is-tv');
+          const t = document.createElement('div');
+          t.className = 'tracking';
+          box.appendChild(t);
+          t.addEventListener('animationend', () => t.remove());
+        }
+        // в момент вздрагивания — пачка цветных полос по обоим краям
+        for (let k = 0; k < 5; k++) {
+          const side = k % 2 ? 'left' : 'right';
+          spawn(side, r(5, 92), pick(['is-bar', 'is-red', 'is-cyan', 'is-line']), Math.min(innerWidth * .3, r(60, 360)), r(2, 18));
+        }
+        setTimeout(() => root.classList.remove('is-jolt', 'is-tv'), 280);
+        setTimeout(jolt, r(5000, 11000));
+      };
+      // Сильный сбой: на доли секунды весь screen «зажёвывает» — 2–3 вспышки подряд
+      const cv = document.createElement('canvas');
+      cv.className = 'crash';
+      box.appendChild(cv);
+      const ctx = cv.getContext('2d');
+      const PAL = ['#ff2bd6', '#b44bff', '#3ee0ff', '#ffe14d', '#ff4d6d', '#6b5cff'];
+      const drawCrash = () => {
+        const W = cv.width = Math.ceil(innerWidth / 3), H = cv.height = Math.ceil(innerHeight / 3);
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = '#120a16'; ctx.fillRect(0, 0, W, H);
+        // горизонтальные тёмные и серые полосы
+        for (let y = 0; y < H;) {
+          const bh = r(1, 8);
+          const g = Math.round(r(15, 70));
+          ctx.fillStyle = `rgba(${g + 10},${g},${g + 15},${r(.4, 1)})`;
+          ctx.fillRect(r(-20, 10), y, W * r(.6, 1.2), bh);
+          y += bh + r(0, 4);
+        }
+        // тонкие светлые штрихи
+        for (let k = 0; k < 40; k++) {
+          ctx.fillStyle = `rgba(220,220,255,${r(.08, .4)})`;
+          ctx.fillRect(r(0, W), r(0, H), r(10, W * .5), 1);
+        }
+        // «точки» как у пикселей телевизора в нижней части
+        const top = H * r(.55, .72);
+        for (let y = top; y < H; y += 3) {
+          if (Math.random() < .25) continue;
+          for (let x = 0; x < W; x += 3) {
+            if (Math.random() < .55) continue;
+            ctx.fillStyle = pick(PAL);
+            ctx.globalAlpha = r(.3, .9);
+            ctx.fillRect(x, y, 1.6, 1.6);
+          }
+        }
+        ctx.globalAlpha = 1;
+        // белые смазанные пятна с цветной каймой
+        ctx.globalCompositeOperation = 'lighter';
+        for (let k = 0; k < Math.round(r(2, 5)); k++) {
+          const x = r(0, W * .7), y = r(0, H), w = r(W * .15, W * .5), bh = r(3, 14);
+          [['255,40,200', -4], ['60,220,255', 4], ['255,255,255', 0]].forEach(([c, dx]) => {
+            const gr = ctx.createLinearGradient(x + dx, 0, x + dx + w, 0);
+            gr.addColorStop(0, `rgba(${c},0)`); gr.addColorStop(.25, `rgba(${c},.9)`);
+            gr.addColorStop(.75, `rgba(${c},.9)`); gr.addColorStop(1, `rgba(${c},0)`);
+            ctx.fillStyle = gr; ctx.fillRect(x + dx, y, w, bh);
+          });
+        }
+        ctx.globalCompositeOperation = 'source-over';
+        // красная полоса слева, синяя справа
+        ctx.fillStyle = 'rgba(230,40,50,.9)'; ctx.fillRect(r(0, 3), 0, r(2, 5), H);
+        ctx.fillStyle = 'rgba(30,30,255,.9)'; ctx.fillRect(W * r(.93, .96), H * r(0, .1), W * .05, H);
+      };
+      const crash = () => {
+        const flashes = Math.round(r(2, 3));
+        let t = 0;
+        for (let k = 0; k < flashes; k++) {
+          setTimeout(() => { drawCrash(); cv.classList.add('on'); }, t);
+          t += r(55, 90);
+          setTimeout(() => cv.classList.remove('on'), t);
+          t += r(40, 80);
+        }
+      };
+      let joltCount = 0;
+      const joltWithCrash = () => {
+        joltCount++;
+        if (mode === 'b' && (joltCount % 3 === 0 || Math.random() < .3)) crash();
+      };
+      root.addEventListener('jolt', joltWithCrash);
+
+      setTimeout(burst, 1200);
+      if (mode !== 'c') setTimeout(jolt, r(2500, 5000));
+    })();
+  </script>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rgb-split" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
+      <feOffset in="r" dx="-5" dy="0" result="r2"/>
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="gb"/>
+      <feOffset in="gb" dx="4" dy="0" result="gb2"/>
+      <feBlend in="r2" in2="gb2" mode="screen"/>
+    </filter>
+  </svg>
+  <script>
+    // Плавающее меню: появляется после шапки, раскрывается как настроечная таблица «NO SIGNAL»
+    (() => {
+      const fab = document.querySelector('.fab');
+      const mtv = document.querySelector('.mtv');
+      const hero = document.querySelector('.hero');
+      const turb = mtv.querySelector('#tv-wave feTurbulence');
+      const cv = mtv.querySelector('.mtv__static');
+      const ctx = cv.getContext('2d');
+      const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let timer = null, lastFocus = null, seed = 1;
+      new IntersectionObserver(([e]) => fab.classList.toggle('is-on', !e.isIntersecting), { threshold: 0, rootMargin: '-40% 0px 0px 0px' }).observe(hero);
+      // серая рябь, как на канале без сигнала
+      const drawStatic = () => {
+        const W = cv.width = Math.ceil(innerWidth / 4), H = cv.height = Math.ceil(innerHeight / 4);
+        const img = ctx.createImageData(W, H), d = img.data;
+        for (let y = 0; y < H; y++) {
+          let base = 60 + Math.random() * 90, run = 0, v = base;
+          for (let x = 0; x < W; x++) {
+            if (run-- <= 0) { run = 3 + Math.random() * 30; v = base + (Math.random() - .5) * 120; }
+            const p = (y * W + x) * 4, g = Math.max(0, Math.min(255, v + (Math.random() - .5) * 40));
+            d[p] = d[p + 1] = d[p + 2] = g; d[p + 3] = 255;
+          }
+        }
+        ctx.putImageData(img, 0, 0);
+      };
+      const tick = () => {
+        drawStatic();
+        turb.setAttribute('seed', (seed = seed % 9 + 1));
+        turb.setAttribute('baseFrequency', `0.001 ${(0.016 + Math.random() * 0.012).toFixed(3)}`);
+      };
+      const setOpen = (open) => {
+        document.documentElement.classList.toggle('mtv-open', open);
+        fab.setAttribute('aria-expanded', open);
+        mtv.inert = !open;
+        if (open) {
+          lastFocus = document.activeElement;
+          tick();
+          if (!calm) timer = setInterval(tick, 90);
+          setTimeout(() => mtv.querySelector('.mtv__nav a').focus({ preventScroll: true }), 500);
+        } else {
+          clearInterval(timer);
+          if (lastFocus) lastFocus.focus({ preventScroll: true });
+        }
+      };
+      fab.addEventListener('click', () => setOpen(true));
+      mtv.querySelector('.mtv__close').addEventListener('click', () => setOpen(false));
+      mtv.querySelectorAll('.mtv__nav a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+      addEventListener('keydown', e => { if (e.key === 'Escape' && mtv.inert === false) setOpen(false); });
+    })();
+  </script>
+  <script>
+    // Logofolio: показываем несколько строк, остальное по кнопке (сколько логотипов в строке — берём из сетки)
+    (() => {
+      const grid = document.querySelector('.logos__grid');
+      const items = [...grid.children];
+      const btn = document.querySelector('.logos__more');
+      let rows = 0;
+      const perRow = () => getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+      const less = document.querySelector('.logos__less');
+      const baseRows = () => (innerWidth >= 1200 ? 4 : 5);
+      const render = () => {
+        const shown = perRow() * rows;
+        items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
+        btn.hidden = shown >= items.length;
+        less.hidden = rows <= baseRows();
+      };
+      rows = baseRows();
+      btn.addEventListener('click', () => { rows += baseRows(); render(); });
+      less.addEventListener('click', () => {
+        rows = baseRows(); render();
+        document.getElementById('logofolio').scrollIntoView({ behavior: 'smooth' });
+      });
+      addEventListener('resize', render);
+      render();
+    })();
+  </script>
+  <script>
+    // Cases на мобилке: главный screen и описание сверху, всё остальное (телефон, коллаж, скрины) — одним слайдером
+    (() => {
+      document.querySelectorAll('.case:not(.case--app)').forEach(sec => {
+        const imgs = [...sec.querySelectorAll('.case__phone, .case__collage, .case__cards img')];
+        if (!imgs.length) return;
+        const ul = document.createElement('ul');
+        ul.className = 'case__mslider';
+        ul.setAttribute('aria-hidden', 'true');
+        imgs.forEach(img => {
+          const li = document.createElement('li');
+          const c = img.cloneNode(true);
+          c.removeAttribute('class');
+          li.appendChild(c);
+          ul.appendChild(li);
+        });
+        sec.querySelector('.case__stage').after(ul);
+      });
+    })();
+  </script>
+  <script>
+    // Cases: сначала 3, остальные по кнопке
+    (() => {
+      const STEP = 3;
+      const items = [...document.querySelectorAll('#cases > .case')];
+      const more = document.querySelector('.cases__more');
+      const less = document.querySelector('.cases__less');
+      let shown = STEP;
+      const render = () => {
+        items.forEach((s, i) => { s.hidden = i >= shown; });
+        more.hidden = shown >= items.length;
+        less.hidden = shown <= STEP;
+      };
+      more.addEventListener('click', () => { shown += STEP; render(); });
+      less.addEventListener('click', () => {
+        shown = STEP; render();
+        items[STEP - 1].scrollIntoView({ behavior: 'smooth' });
+      });
+      // если перешли по ссылке на скрытый кейс — раскрываем
+      const open = () => { const t = location.hash && document.querySelector(location.hash); const n = items.indexOf(t); if (n >= shown) { shown = Math.ceil((n + 1) / STEP) * STEP; render(); t.scrollIntoView(); } };
+      render(); addEventListener('hashchange', open); open();
+    })();
+  </script>
+</body>
+</html>

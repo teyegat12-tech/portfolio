@@ -1337,3 +1337,21 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
   .tv__label, .mtv__nav a { animation: none !important; }
   .wave { filter: none; }
 }
+
+/* ---------- CV и переключатель языка ---------- */
+.contacts__cv { margin-top: calc(40 * var(--u)); }
+.hero__lang { position: absolute; left: calc(1107 * var(--u)); top: calc(660 * var(--u)); margin: 0; font-size: max(12px, calc(20 * var(--u))); letter-spacing: 0.03em; text-transform: uppercase; }
+.hero__lang b { font-weight: 400; }
+.hero__lang a { opacity: .6; text-decoration: underline; text-underline-offset: .25em; }
+.hero__lang a:hover { opacity: 1; }
+.mtv__extra { display: flex; gap: 6px; margin-top: 6px; }
+.mtv__extra a { flex: 1; padding: 12px 16px; background: #f2f2f2; color: #111; font-family: var(--font-mono); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; text-align: center; }
+.mtv__extra a:last-child { flex: 0 0 auto; background: #f5e23a; }
+.mtv__extra a:hover { opacity: 1; background: #4fe3e3; }
+@media (max-width: 1199px) {
+  .contacts__cv { margin-top: calc(24 * var(--m)); }
+  .mtv__extra a { padding: 10px 12px; font-size: 12px; }
+}
+
+html[lang="en"] .contacts__title { font-size: calc(96 * var(--u)); }
+@media (max-width: 1199px) { .hero__lang { display: none; } }
