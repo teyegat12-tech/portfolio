@@ -1025,3 +1025,27 @@ a:hover { opacity: .6; }
   .sky__layer--4 { transform: scale(1, -1); }
 }
 .nw { white-space: nowrap; }
+
+/* ---------- Шум на фоне: лёгкое мерцание ---------- */
+.grain {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background: url("assets/noise.png") 0 0 / 256px 256px repeat;
+  opacity: .07;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 50;
+  animation: grain .6s steps(6) infinite;
+}
+@keyframes grain {
+  0%   { transform: translate(0, 0); }
+  17%  { transform: translate(-7%, 4%); }
+  33%  { transform: translate(5%, -9%); }
+  50%  { transform: translate(-11%, -3%); }
+  67%  { transform: translate(9%, 8%); }
+  83%  { transform: translate(-3%, 11%); }
+  100% { transform: translate(0, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
