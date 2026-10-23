@@ -1355,3 +1355,18 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
 
 html[lang="en"] .contacts__title { font-size: calc(96 * var(--u)); }
 @media (max-width: 1199px) { .hero__lang { display: none; } }
+
+/* квадратик CV под кнопкой меню — только на десктопе */
+.fab-cv {
+  position: fixed; top: 72px; right: 24px; z-index: 60;
+  display: grid; place-items: center; width: 40px; height: 40px;
+  border: 1px solid #f2f2f2; color: #f2f2f2;
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: .05em;
+  opacity: 0; transform: translateY(-20px) rotate(8deg); pointer-events: none;
+  transition: opacity .3s .05s, transform .4s cubic-bezier(.34, 1.8, .64, 1) .05s;
+}
+.fab.is-on + .fab-cv { opacity: 1; transform: none; pointer-events: auto; }
+.fab-cv:hover { opacity: 1; transform: rotate(4deg) scale(1.06); text-shadow: -2px 0 #e03fe0, 2px 0 #4fe3e3; }
+.mtv-open .fab-cv { opacity: 0 !important; pointer-events: none !important; }
+@media (min-width: 1200px) { .contacts__cv { display: none; } }
+@media (max-width: 1199px) { .fab-cv { display: none; } }
