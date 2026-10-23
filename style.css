@@ -471,7 +471,7 @@ a:hover { opacity: .6; }
 .more-row button { margin: 0 !important; background: none; color: inherit; font: inherit; font-size: max(12px, calc(20 * var(--u))); letter-spacing: 0.03em; text-transform: uppercase; cursor: pointer; }
 .more-row button[hidden] { display: none !important; }
 .more-row:not(:has(button:not([hidden]))) { display: none; }
-.cases__more-row { margin: calc(-180 * var(--u)) 0 calc(300 * var(--u)); } /* 120 от скринов, 300 до следующего раздела */
+.cases__more-row { position: relative; z-index: 2; margin: calc(-180 * var(--u)) 0 calc(300 * var(--u)); } /* 120 от скринов, 300 до следующего раздела */
 button.logos__more {
   display: block;
   margin: calc(64 * var(--u)) auto 0;
