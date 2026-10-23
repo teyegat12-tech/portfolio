@@ -481,6 +481,7 @@
       <li><img src="assets/logos/logo-34.svg" width="180" height="130" alt="МКШОР «Север»" loading="lazy"></li>
       <li><img src="assets/logos/logo-35.svg" width="180" height="130" alt="Монограмма" loading="lazy"></li>
     </ul>
+    <button class="tag-link logos__more" type="button" hidden>Показать ещё</button>
   </section>
 
   <section class="sec contacts" id="contacts" aria-labelledby="contacts-title">
@@ -845,6 +846,26 @@
       mtv.querySelector('.mtv__close').addEventListener('click', () => setOpen(false));
       mtv.querySelectorAll('.mtv__nav a').forEach(a => a.addEventListener('click', () => setOpen(false)));
       addEventListener('keydown', e => { if (e.key === 'Escape' && mtv.inert === false) setOpen(false); });
+    })();
+  </script>
+  <script>
+    // Логофолио: показываем несколько строк, остальное по кнопке (сколько логотипов в строке — берём из сетки)
+    (() => {
+      const grid = document.querySelector('.logos__grid');
+      const items = [...grid.children];
+      const btn = document.querySelector('.logos__more');
+      let rows = 0;
+      const perRow = () => getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+      const baseRows = () => (innerWidth >= 1200 ? 4 : 7);
+      const render = () => {
+        const shown = perRow() * rows;
+        items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
+        btn.hidden = shown >= items.length;
+      };
+      rows = baseRows();
+      btn.addEventListener('click', () => { rows += baseRows(); render(); });
+      addEventListener('resize', render);
+      render();
     })();
   </script>
 </body>

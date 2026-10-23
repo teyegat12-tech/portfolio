@@ -456,10 +456,23 @@ a:hover { opacity: .6; }
   display: grid;
   grid-template-columns: repeat(7, calc(180 * var(--u)));
   justify-content: space-between;
-  row-gap: calc(32 * var(--u));
+  row-gap: calc(64 * var(--u));
   margin-top: calc(141 * var(--u));
 }
 .logos__grid img { width: 100%; height: auto; }
+.logos__grid li.is-more { display: none; }
+button.logos__more {
+  display: block;
+  margin: calc(64 * var(--u)) auto 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: max(12px, calc(20 * var(--u)));
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.logos__more[hidden] { display: none; }
 
 /* ---------- Контакты ---------- */
 .contacts { position: relative; min-height: calc(1000 * var(--u)); padding-bottom: calc(60 * var(--u)); }
@@ -568,7 +581,7 @@ a:hover { opacity: .6; }
 }
 .illu__grid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 .illu__grid li.is-more { display: none; }
-.illu__more {
+button.illu__more {
   display: block;
   margin: calc(48 * var(--u)) auto 0;
   background: none;
@@ -957,9 +970,10 @@ a:hover { opacity: .6; }
   .logos__grid {
     grid-template-columns: repeat(3, 1fr);
     column-gap: calc(16 * var(--m));
-    row-gap: calc(12 * var(--m));
+    row-gap: calc(24 * var(--m));
     margin-top: calc(40 * var(--m));
   }
+  .logos__more { margin-top: calc(32 * var(--m)); font-size: max(13px, calc(14 * var(--m))); }
 
   /* Контакты */
   .contacts { min-height: 0; padding-bottom: calc(60 * var(--m)); }
