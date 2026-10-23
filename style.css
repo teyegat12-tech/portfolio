@@ -437,6 +437,9 @@ a:hover { opacity: .6; }
   flex-direction: column;
 }
 .case__collage { width: 100%; }
+/* кейс без мобилки: описание по нижнему краю главного экрана, до скринов — как в остальных кейсах */
+.case--nophone .case__stage { height: calc(749 * var(--u)); }
+.case--nophone .case__desc { margin-bottom: 0; }
 .case__desc {
   margin-top: auto;
   margin-bottom: calc(48 * var(--u));
