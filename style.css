@@ -293,7 +293,7 @@ a:hover { opacity: .6; }
 .soft__row {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(20 * var(--u)) calc(38 * var(--u));
+  gap: calc(20 * var(--u)) calc(16 * var(--u));
   opacity: .87;
   filter: grayscale(1); /* как в Figma (Luminosity): иконки ч/б */
 }
@@ -301,7 +301,7 @@ a:hover { opacity: .6; }
   display: flex;
   flex-direction: column;
   gap: calc(8 * var(--u));
-  width: calc(140 * var(--u));
+  width: calc(124 * var(--u));
   font-size: max(11px, calc(16 * var(--u)));
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -774,7 +774,7 @@ a:hover { opacity: .6; }
   .soft__title { margin-bottom: calc(16 * var(--m)); font-size: max(13px, calc(14 * var(--m))); }
   .soft__row {
     flex-wrap: nowrap;
-    gap: calc(24 * var(--m));
+    gap: calc(12 * var(--m));
     overflow-x: auto;
     padding-right: calc(24 * var(--m));
     scroll-snap-type: x proximity;
@@ -783,8 +783,8 @@ a:hover { opacity: .6; }
   }
   .soft__row::-webkit-scrollbar { display: none; }
   .tool {
-    flex: 0 0 calc(100 * var(--m));
-    width: calc(100 * var(--m));
+    flex: 0 0 calc(84 * var(--m));
+    width: calc(84 * var(--m));
     gap: calc(8 * var(--m));
     font-size: max(11px, calc(12 * var(--m)));
     scroll-snap-align: start;
