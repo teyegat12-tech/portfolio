@@ -63,7 +63,8 @@ a:hover { opacity: .6; }
 
 .hero {
   position: relative;
-  height: calc(1036 * var(--u));
+  /* первый экран — только шапка: фото и «Привет» появляются после скролла */
+  height: max(calc(1036 * var(--u)), calc(100vh + 330 * var(--u)));
 }
 /* тексты шапки поверх фото, облака — под фото (как в Figma) */
 .hero__name, .hero__roles, .hero__nav, .hero__year { z-index: 2; }
