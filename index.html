@@ -635,10 +635,10 @@
   </script>
   <script>
     // Помехи у краёв + иногда весь экран вздрагивает.
-    // Варианты: ?glitch=a — кассета (по умолчанию), b — телевизор, c — мягкий (без вздрагивания)
+    // Варианты: ?glitch=a — кассета, b — телевизор (по умолчанию), c — мягкий (без вздрагивания)
     (() => {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const mode = (new URLSearchParams(location.search).get('glitch') || 'a').toLowerCase();
+      const mode = (new URLSearchParams(location.search).get('glitch') || 'b').toLowerCase();
       const box = document.querySelector('.glitch');
       const root = document.documentElement;
       const r = (a, b) => a + Math.random() * (b - a);
@@ -665,6 +665,7 @@
       const jolt = () => {
         root.style.setProperty('--jx', `${r(-8, 8).toFixed(1)}px`);
         root.classList.add('is-jolt');
+        root.dispatchEvent(new Event('jolt'));
         if (mode === 'b') {
           root.classList.add('is-tv');
           const t = document.createElement('div');
@@ -680,6 +681,74 @@
         setTimeout(() => root.classList.remove('is-jolt', 'is-tv'), 280);
         setTimeout(jolt, r(5000, 11000));
       };
+      // Сильный сбой: на доли секунды весь экран «зажёвывает» — 2–3 вспышки подряд
+      const cv = document.createElement('canvas');
+      cv.className = 'crash';
+      box.appendChild(cv);
+      const ctx = cv.getContext('2d');
+      const PAL = ['#ff2bd6', '#b44bff', '#3ee0ff', '#ffe14d', '#ff4d6d', '#6b5cff'];
+      const drawCrash = () => {
+        const W = cv.width = Math.ceil(innerWidth / 3), H = cv.height = Math.ceil(innerHeight / 3);
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = '#120a16'; ctx.fillRect(0, 0, W, H);
+        // горизонтальные тёмные и серые полосы
+        for (let y = 0; y < H;) {
+          const bh = r(1, 8);
+          const g = Math.round(r(15, 70));
+          ctx.fillStyle = `rgba(${g + 10},${g},${g + 15},${r(.4, 1)})`;
+          ctx.fillRect(r(-20, 10), y, W * r(.6, 1.2), bh);
+          y += bh + r(0, 4);
+        }
+        // тонкие светлые штрихи
+        for (let k = 0; k < 40; k++) {
+          ctx.fillStyle = `rgba(220,220,255,${r(.08, .4)})`;
+          ctx.fillRect(r(0, W), r(0, H), r(10, W * .5), 1);
+        }
+        // «точки» как у пикселей телевизора в нижней части
+        const top = H * r(.55, .72);
+        for (let y = top; y < H; y += 3) {
+          if (Math.random() < .25) continue;
+          for (let x = 0; x < W; x += 3) {
+            if (Math.random() < .55) continue;
+            ctx.fillStyle = pick(PAL);
+            ctx.globalAlpha = r(.3, .9);
+            ctx.fillRect(x, y, 1.6, 1.6);
+          }
+        }
+        ctx.globalAlpha = 1;
+        // белые смазанные пятна с цветной каймой
+        ctx.globalCompositeOperation = 'lighter';
+        for (let k = 0; k < Math.round(r(2, 5)); k++) {
+          const x = r(0, W * .7), y = r(0, H), w = r(W * .15, W * .5), bh = r(3, 14);
+          [['255,40,200', -4], ['60,220,255', 4], ['255,255,255', 0]].forEach(([c, dx]) => {
+            const gr = ctx.createLinearGradient(x + dx, 0, x + dx + w, 0);
+            gr.addColorStop(0, `rgba(${c},0)`); gr.addColorStop(.25, `rgba(${c},.9)`);
+            gr.addColorStop(.75, `rgba(${c},.9)`); gr.addColorStop(1, `rgba(${c},0)`);
+            ctx.fillStyle = gr; ctx.fillRect(x + dx, y, w, bh);
+          });
+        }
+        ctx.globalCompositeOperation = 'source-over';
+        // красная полоса слева, синяя справа
+        ctx.fillStyle = 'rgba(230,40,50,.9)'; ctx.fillRect(r(0, 3), 0, r(2, 5), H);
+        ctx.fillStyle = 'rgba(30,30,255,.9)'; ctx.fillRect(W * r(.93, .96), H * r(0, .1), W * .05, H);
+      };
+      const crash = () => {
+        const flashes = Math.round(r(2, 3));
+        let t = 0;
+        for (let k = 0; k < flashes; k++) {
+          setTimeout(() => { drawCrash(); cv.classList.add('on'); }, t);
+          t += r(55, 90);
+          setTimeout(() => cv.classList.remove('on'), t);
+          t += r(40, 80);
+        }
+      };
+      let joltCount = 0;
+      const joltWithCrash = () => {
+        joltCount++;
+        if (mode === 'b' && (joltCount % 3 === 0 || Math.random() < .3)) crash();
+      };
+      root.addEventListener('jolt', joltWithCrash);
+
       setTimeout(burst, 1200);
       if (mode !== 'c') setTimeout(jolt, r(2500, 5000));
     })();
