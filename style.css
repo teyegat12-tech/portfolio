@@ -440,7 +440,7 @@ a:hover { opacity: .6; }
 /* кейс без мобилки: описание по нижнему краю главного экрана, до скринов — как в остальных кейсах */
 .case--nophone .case__stage { height: calc(749 * var(--u)); }
 .case--nophone .case__desc { margin-bottom: 0; }
-.case--nophone .case__side { right: auto; left: calc(1039 * var(--u)); } /* сцены ближе к главному экрану */
+.case--nophone .case__collage { transform: translateX(calc(-381 * var(--u))); } /* сцены ближе к главному экрану, описание на своём месте */
 .case__desc {
   margin-top: auto;
   margin-bottom: calc(48 * var(--u));
@@ -970,7 +970,7 @@ button.illu__more {
   /* кейс без коллажа: телефон по центру */
   .case--nophone .case__stage { height: auto; }
   .case--nophone .case__main { width: 100% !important; }
-  .case--nophone .case__collage { grid-column: 1 / -1; justify-self: center; width: 72% !important; }
+  .case--nophone .case__collage { grid-column: 1 / -1; justify-self: center; width: 72% !important; transform: none; }
   .case--solo .case__phone { grid-column: 1 / -1; justify-self: center; width: 60% !important; }
   .case__cards { margin-top: calc(24 * var(--m)); }
   .case__cards li { flex: 0 0 calc(240 * var(--m)); scroll-snap-align: start; }
