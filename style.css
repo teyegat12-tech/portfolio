@@ -437,6 +437,9 @@ a:hover { opacity: .6; }
   flex-direction: column;
 }
 .case__collage { width: 100%; }
+/* кейс без мобилки: главный экран крупнее */
+.case--nophone .case__stage { height: calc(1036 * var(--u)); }
+.case--nophone .case__main { width: calc(1354 * var(--u)) !important; }
 .case__desc {
   margin-top: auto;
   margin-bottom: calc(48 * var(--u));
@@ -964,6 +967,9 @@ button.illu__more {
   .case__desc { grid-column: 1 / -1; margin: calc(8 * var(--m)) 0 0; font-size: max(13px, calc(14 * var(--m))); }
   .case__side .btn { grid-column: 1 / -1; }
   /* кейс без коллажа: телефон по центру */
+  .case--nophone .case__stage { height: auto; }
+  .case--nophone .case__main { width: 100% !important; }
+  .case--nophone .case__collage { grid-column: 1 / -1; justify-self: center; width: 72% !important; }
   .case--solo .case__phone { grid-column: 1 / -1; justify-self: center; width: 60% !important; }
   .case__cards { margin-top: calc(24 * var(--m)); }
   .case__cards li { flex: 0 0 calc(240 * var(--m)); scroll-snap-align: start; }
