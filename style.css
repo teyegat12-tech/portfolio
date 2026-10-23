@@ -406,14 +406,19 @@ a:hover { opacity: .6; }
   letter-spacing: 0.03em;
 }
 /* Кейс 1: экраны приложения лесенкой */
-.case__app { position: relative; margin-top: calc(120 * var(--u)); height: calc(596 * var(--u)); }
+.case__app { position: relative; margin-top: calc(120 * var(--u)); height: calc(680 * var(--u)); }
 .case__phones { display: flex; gap: calc(15 * var(--u)); }
 .case__phones li { flex: 0 0 calc(212 * var(--u)); }
 .case__phones li:nth-child(n+5) { margin-top: calc(130 * var(--u)); }
-.case__app-desc {
+.case__app-info {
   position: absolute;
   left: 0;
   top: calc(527 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(32 * var(--u));
+}
+.case__app-desc {
   max-width: calc(640 * var(--u));
   font-size: max(13px, calc(20 * var(--u)));
   line-height: 1.2;
@@ -926,7 +931,8 @@ a:hover { opacity: .6; }
   .case__phones::-webkit-scrollbar, .case__cards::-webkit-scrollbar { display: none; }
   .case__phones li { flex: 0 0 calc(150 * var(--m)); scroll-snap-align: start; }
   .case__phones li:nth-child(n+5) { margin-top: 0; }
-  .case__app-desc { position: static; max-width: none; margin-top: calc(24 * var(--m)); font-size: max(13px, calc(14 * var(--m))); }
+  .case__app-info { position: static; gap: calc(20 * var(--m)); margin-top: calc(24 * var(--m)); }
+  .case__app-desc { position: static; max-width: none; margin-top: 0; font-size: max(13px, calc(14 * var(--m))); }
   .sec__title { white-space: nowrap; }
   .sec__tag { max-width: 62%; }
   .case__stage {
@@ -1017,3 +1023,4 @@ a:hover { opacity: .6; }
   .sky__layer--echo { display: none; }
   .sky__layer--4 { transform: scale(1, -1); }
 }
+.nw { white-space: nowrap; }
