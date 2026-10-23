@@ -579,7 +579,7 @@ button.logos__more {
   gap: calc(24 * var(--u));
   margin-top: calc(120 * var(--u));
 }
-.illu__grid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.illu__grid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 2px; } /* как у кейсов и сертификатов */
 .illu__grid li.is-more { display: none; }
 button.illu__more {
   display: block;
