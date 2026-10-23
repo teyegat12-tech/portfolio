@@ -466,6 +466,11 @@ a:hover { opacity: .6; }
 }
 .logos__grid img { width: 100%; height: auto; }
 .logos__grid li.is-more { display: none; }
+/* кнопки «Показать ещё» / «Скрыть» в одну строку по центру */
+.more-row { display: flex; justify-content: center; gap: calc(24 * var(--u)); margin-top: calc(64 * var(--u)); }
+.more-row button { margin: 0 !important; background: none; color: inherit; font: inherit; font-size: max(12px, calc(20 * var(--u))); letter-spacing: 0.03em; text-transform: uppercase; cursor: pointer; }
+.more-row button[hidden] { display: none !important; }
+.more-row:not(:has(button:not([hidden]))) { display: none; }
 button.logos__more {
   display: block;
   margin: calc(64 * var(--u)) auto 0;
@@ -1000,7 +1005,8 @@ button.illu__more {
     row-gap: calc(24 * var(--m));
     margin-top: calc(40 * var(--m));
   }
-  .logos__more { margin-top: calc(32 * var(--m)); font-size: max(13px, calc(14 * var(--m))); }
+  .more-row { margin-top: calc(32 * var(--m)); gap: calc(12 * var(--m)); }
+  .more-row button { font-size: max(13px, calc(14 * var(--m))); }
 
   /* Контакты */
   .contacts { min-height: 0; padding-bottom: calc(60 * var(--m)); }
@@ -1041,7 +1047,7 @@ button.illu__more {
   .illu__grid li { flex: 0 0 calc(290 * var(--m)); scroll-snap-align: start; }
   .illu__bar { margin: calc(16 * var(--m)) 0 0; width: 100%; }
   .illu__grid li.is-more { display: block; }
-  .illu__more, .illu__more[hidden] { display: none; }
+  .illu__more-row { display: none; }
 
   /* Фриланс — сетка 3 колонки */
   .clients__grid {

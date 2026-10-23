@@ -471,7 +471,7 @@
       <li><img src="assets/illu/illu-10.webp" width="680" height="680" alt="Иллюстрация: Девушка с лапшой и осьминогом" loading="lazy"></li>
     </ul>
     <div class="soft__bar illu__bar" aria-hidden="true"><span></span></div>
-    <button class="tag-link illu__more" type="button" hidden>Показать ещё</button>
+    <div class="more-row illu__more-row"><button class="tag-link illu__more" type="button" hidden>Показать ещё</button><button class="tag-link illu__less" type="button" hidden>Скрыть</button></div>
   </section>
 
   <section class="sec logos" id="logofolio" aria-labelledby="logos-title">
@@ -516,7 +516,7 @@
       <li><img src="assets/logos/logo-34.svg" width="180" height="130" alt="МКШОР «Север»" loading="lazy"></li>
       <li><img src="assets/logos/logo-35.svg" width="180" height="130" alt="Монограмма" loading="lazy"></li>
     </ul>
-    <button class="tag-link logos__more" type="button" hidden>Показать ещё</button>
+    <div class="more-row"><button class="tag-link logos__more" type="button" hidden>Показать ещё</button><button class="tag-link logos__less" type="button" hidden>Скрыть</button></div>
   </section>
 
   <section class="sec contacts" id="contacts" aria-labelledby="contacts-title">
@@ -679,12 +679,18 @@
       const STEP = 10;
       const items = [...document.querySelectorAll('.illu__grid li')];
       const btn = document.querySelector('.illu__more');
+      const less = document.querySelector('.illu__less');
       let shown = STEP;
       const render = () => {
         items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
         btn.hidden = shown >= items.length;
+        less.hidden = shown <= STEP;
       };
       btn.addEventListener('click', () => { shown += STEP; render(); });
+      less.addEventListener('click', () => {
+        shown = STEP; render();
+        document.getElementById('illustrations').scrollIntoView({ behavior: 'smooth' });
+      });
       render();
     })();
   </script>
@@ -876,14 +882,20 @@
       const btn = document.querySelector('.logos__more');
       let rows = 0;
       const perRow = () => getComputedStyle(grid).gridTemplateColumns.split(' ').length;
-      const baseRows = () => (innerWidth >= 1200 ? 4 : 7);
+      const less = document.querySelector('.logos__less');
+      const baseRows = () => (innerWidth >= 1200 ? 4 : 5);
       const render = () => {
         const shown = perRow() * rows;
         items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
         btn.hidden = shown >= items.length;
+        less.hidden = rows <= baseRows();
       };
       rows = baseRows();
       btn.addEventListener('click', () => { rows += baseRows(); render(); });
+      less.addEventListener('click', () => {
+        rows = baseRows(); render();
+        document.getElementById('logofolio').scrollIntoView({ behavior: 'smooth' });
+      });
       addEventListener('resize', render);
       render();
     })();
