@@ -453,6 +453,7 @@
       </ul>
     </section>
   </div>
+  <div class="more-row cases__more-row"><button class="tag-link cases__more" type="button" hidden>Показать ещё кейсы</button><button class="tag-link cases__less" type="button" hidden>Скрыть</button></div>
 
   <section class="sec illu" id="illustrations" aria-labelledby="illu-title">
     <div class="sec__head">
@@ -918,6 +919,29 @@
         });
         sec.querySelector('.case__stage').after(ul);
       });
+    })();
+  </script>
+  <script>
+    // Кейсы: сначала 3, остальные по кнопке
+    (() => {
+      const STEP = 3;
+      const items = [...document.querySelectorAll('#cases > .case')];
+      const more = document.querySelector('.cases__more');
+      const less = document.querySelector('.cases__less');
+      let shown = STEP;
+      const render = () => {
+        items.forEach((s, i) => { s.hidden = i >= shown; });
+        more.hidden = shown >= items.length;
+        less.hidden = shown <= STEP;
+      };
+      more.addEventListener('click', () => { shown += STEP; render(); });
+      less.addEventListener('click', () => {
+        shown = STEP; render();
+        items[STEP - 1].scrollIntoView({ behavior: 'smooth' });
+      });
+      // если перешли по ссылке на скрытый кейс — раскрываем
+      const open = () => { const t = location.hash && document.querySelector(location.hash); const n = items.indexOf(t); if (n >= shown) { shown = Math.ceil((n + 1) / STEP) * STEP; render(); t.scrollIntoView(); } };
+      render(); addEventListener('hashchange', open); open();
     })();
   </script>
 </body>
