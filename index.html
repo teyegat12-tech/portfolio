@@ -395,6 +395,7 @@
       <li><img src="assets/illu/illu-10.webp" width="680" height="680" alt="Иллюстрация: Девушка с лапшой и осьминогом" loading="lazy"></li>
     </ul>
     <div class="soft__bar illu__bar" aria-hidden="true"><span></span></div>
+    <button class="tag-link illu__more" type="button" hidden>Показать ещё</button>
   </section>
 
   <section class="sec logos" id="logofolio" aria-labelledby="logos-title">
@@ -453,7 +454,7 @@
           <li><a href="mailto:teyega@mail.ru"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>teyega@mail.ru</span></a></li>
           <li><a href="https://t.me/nadenka_nadushca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M5.5 11.6 17 7.2c.5-.2 1 .1.8.9l-2 9.3c-.1.6-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5.1c.2-.2 0-.3-.4-.1l-6.9 4.4-3-.9c-.6-.2-.6-.6.3-.9z" fill="#101010"/></svg><span>@nadenka_nadushca</span></a></li>
           <li><a href="https://www.instagram.com/nadenka_nadushca/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="#101010" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="#101010"/></svg><span>@nadenka_nadushca</span></a></li>
-          <li><a href="https://wa.me/79821886114" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5A10.5 10.5 0 0 0 2.9 17.3L1.5 22.5l5.3-1.4A10.5 10.5 0 1 0 12 1.5z" fill="currentColor"/><path d="M8.6 6.9c-.3 0-.7.1-1 .5-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.4 4.7 2.6 1 3.2.8 3.7.8.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4l-2-.9c-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.5-.4-.5-.6-.5z" fill="#101010"/></svg><span>+7 (982) 188-61-14</span></a></li>
+          <li><a href="https://wa.me/79821886114" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5A10.5 10.5 0 0 0 2.9 17.3L1.5 22.5l5.3-1.4A10.5 10.5 0 1 0 12 1.5z" fill="currentColor"/><path transform="translate(6.6 6.6) scale(.45)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#101010"/></svg><span>+7 (982) 188-61-14</span></a></li>
         </ul>
       </div>
     </div>
@@ -609,6 +610,21 @@
         btn.setAttribute('aria-expanded', 'false');
       }
     });
+  </script>
+  <script>
+    // Иллюстрации: на десктопе показываем по 10, остальное по кнопке
+    (() => {
+      const STEP = 10;
+      const items = [...document.querySelectorAll('.illu__grid li')];
+      const btn = document.querySelector('.illu__more');
+      let shown = STEP;
+      const render = () => {
+        items.forEach((li, i) => li.classList.toggle('is-more', i >= shown));
+        btn.hidden = shown >= items.length;
+      };
+      btn.addEventListener('click', () => { shown += STEP; render(); });
+      render();
+    })();
   </script>
 </body>
 </html>
