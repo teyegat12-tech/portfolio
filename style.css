@@ -1310,6 +1310,8 @@ html.is-jolt.is-tv body > :not(.grain):not(.glitch):not(.sky):not(script) { filt
 
 @media (max-width: 1199px) {
   .fab { top: 14px; right: 14px; width: 36px; height: 36px; padding: 0 10px; }
+  /* на мобилке одно меню — «таблица», кнопка видна сразу */
+  .fab, .fab.is-on { opacity: 1; transform: none; pointer-events: auto; }
   .mtv__close { top: 14px; right: 14px; width: 36px; height: 36px; }
   .tv { width: 86vw; }
   .tv__bars { height: 11vh; }

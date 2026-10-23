@@ -72,9 +72,6 @@
 
     <p class="hero__roles overline">Графический дизайн → Веб-дизайн → UI/UX → иллюстрации → AI</p>
 
-    <button class="menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
-    </button>
 
     <nav class="hero__nav" id="nav" aria-label="Разделы">
       <ul>
@@ -676,21 +673,6 @@
     })();
   </script>
 
-  <script>
-    const btn = document.querySelector('.menu-btn');
-    const nav = document.getElementById('nav');
-    btn.addEventListener('click', () => {
-      const open = document.body.classList.toggle('menu-open');
-      btn.setAttribute('aria-expanded', open);
-      btn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
-    });
-    nav.addEventListener('click', e => {
-      if (e.target.closest('a')) {
-        document.body.classList.remove('menu-open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
   <script>
     // Иллюстрации: на десктопе показываем по 10, остальное по кнопке
     (() => {
