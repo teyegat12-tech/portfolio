@@ -407,7 +407,7 @@ a:hover { opacity: .6; }
   letter-spacing: 0.03em;
 }
 /* Кейс 1: экраны приложения лесенкой */
-.case__app { position: relative; margin-top: calc(120 * var(--u)); height: calc(700 * var(--u)); }
+.case__app { position: relative; margin-top: calc(120 * var(--u)); height: calc(724 * var(--u)); }
 .case__phones { display: flex; gap: calc(15 * var(--u)); }
 .case__phones li { flex: 0 0 calc(212 * var(--u)); }
 .case__phones li:nth-child(n+5) { margin-top: calc(130 * var(--u)); }
