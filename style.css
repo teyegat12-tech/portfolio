@@ -437,6 +437,7 @@ a:hover { opacity: .6; }
   flex-direction: column;
 }
 .case__collage { width: 100%; }
+.case__mslider { display: none; }
 /* кейс без мобилки: описание по нижнему краю главного экрана, до скринов — как в остальных кейсах */
 .case--nophone .case__stage { height: calc(749 * var(--u)); }
 .case--nophone .case__desc { margin-bottom: 0; }
@@ -974,6 +975,23 @@ button.illu__more {
   .case--solo .case__phone { grid-column: 1 / -1; justify-self: center; width: 60% !important; }
   .case__cards { margin-top: calc(24 * var(--m)); }
   .case__cards li { flex: 0 0 calc(240 * var(--m)); scroll-snap-align: start; }
+  /* кейсы 2+: главный экран, описание, потом один слайдер со всем остальным */
+  .case:not(.case--app) .case__phone,
+  .case:not(.case--app) .case__collage,
+  .case:not(.case--app) .case__cards { display: none; }
+  .case__mslider {
+    display: flex;
+    gap: calc(12 * var(--m));
+    margin: calc(24 * var(--m)) calc(-20 * var(--m)) 0 0;
+    padding: 0 calc(20 * var(--m)) 0 0;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .case__mslider::-webkit-scrollbar { display: none; }
+  .case__mslider li { flex: none; height: calc(400 * var(--m)); scroll-snap-align: start; }
+  .case__mslider img { display: block; width: auto !important; height: 100%; }
 
   /* Лого — 3 колонки */
   .logos__grid {

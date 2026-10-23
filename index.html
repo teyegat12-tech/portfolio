@@ -906,5 +906,25 @@
       render();
     })();
   </script>
+  <script>
+    // Кейсы на мобилке: главный экран и описание сверху, всё остальное (телефон, коллаж, скрины) — одним слайдером
+    (() => {
+      document.querySelectorAll('.case:not(.case--app)').forEach(sec => {
+        const imgs = [...sec.querySelectorAll('.case__phone, .case__collage, .case__cards img')];
+        if (!imgs.length) return;
+        const ul = document.createElement('ul');
+        ul.className = 'case__mslider';
+        ul.setAttribute('aria-hidden', 'true');
+        imgs.forEach(img => {
+          const li = document.createElement('li');
+          const c = img.cloneNode(true);
+          c.removeAttribute('class');
+          li.appendChild(c);
+          ul.appendChild(li);
+        });
+        sec.querySelector('.case__stage').after(ul);
+      });
+    })();
+  </script>
 </body>
 </html>
