@@ -19,44 +19,38 @@
     <span></span><span></span><span></span>
   </button>
   <div class="mtv" id="mtv" role="dialog" aria-modal="true" aria-label="Меню" inert>
-    <div class="mtv__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="mtv__bg" aria-hidden="true"></div>
-    <svg class="mtv__doodles" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g class="boil" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path class="d d1" d="M40 90 C90 20 140 160 190 80 S290 10 330 100 S430 170 470 70" stroke="#ff3ea5" stroke-width="14"/>
-        <path class="d d2" d="M640 50 l40 60 l40 -60 l40 60 l40 -60" stroke="#111" stroke-width="12"/>
-        <circle class="d d3" cx="890" cy="470" r="70" stroke="#00e5ff" stroke-width="14"/>
-        <path class="d d4" d="M80 470 l60 -100 l60 100 z" stroke="#111" stroke-width="10"/>
-        <path class="d d5" d="M560 560 C600 500 660 600 700 540 S780 480 820 560" stroke="#b6ff00" stroke-width="16"/>
-        <path class="d d6" d="M700 160 l12 34 36 2 -28 22 10 34 -30 -20 -30 20 10 -34 -28 -22 36 -2 z" stroke="#111" stroke-width="7" fill="#ff7a00"/>
-        <path class="d d7" d="M930 250 q-40 30 0 60 q40 30 0 60 q-40 30 0 60" stroke="#8a5cff" stroke-width="12"/>
-        <path class="d d8" d="M30 300 q30 -30 60 0 t60 0 t60 0" stroke="#00e5ff" stroke-width="10"/>
-      </g>
-        <g class="punk" stroke="none">
-          <path class="d d9" d="M300 520 l70 60 M370 520 l-70 60" stroke="#ff3ea5" stroke-width="12" fill="none"/>
-        </g>
-    </svg>
-    <p class="mtv__logo" aria-hidden="true"><span>M</span><span>E</span><span>N</span><span>U</span><svg class="pin" viewBox="0 0 80 24" aria-hidden="true"><path d="M6 12 h58 a8 8 0 1 0 -8 -8 M6 12 a6 6 0 0 1 6 -6 h44" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round"/><circle cx="6" cy="12" r="4" fill="#999"/><rect x="60" y="2" width="16" height="20" rx="4" fill="#bbb" stroke="#555" stroke-width="2"/></svg></p>
+    <canvas class="mtv__static" aria-hidden="true"></canvas>
+    <div class="mtv__side mtv__side--l wave" aria-hidden="true"><i></i><i></i></div>
+    <div class="mtv__side mtv__side--r wave" aria-hidden="true"><i></i><i></i></div>
+    <div class="tv">
+      <div class="tv__bars wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="tv__label" aria-hidden="true">NO SIGNAL</p>
+      <nav class="mtv__nav" aria-label="Разделы">
+        <ul>
+          <li style="--c:#f2f2f2;--i:0"><a href="#about"><span class="mtv__ch">CH 01</span>Обо мне</a></li>
+          <li style="--c:#f5e23a;--i:1"><a href="#experience"><span class="mtv__ch">CH 02</span>Опыт</a></li>
+          <li style="--c:#4fe3e3;--i:2"><a href="#skills"><span class="mtv__ch">CH 03</span>Скиллы</a></li>
+          <li style="--c:#4fdf4f;--i:3"><a href="#clients"><span class="mtv__ch">CH 04</span>Клиенты</a></li>
+          <li style="--c:#e03fe0;--i:4"><a href="#level"><span class="mtv__ch">CH 05</span>Level 17+</a></li>
+          <li style="--c:#e23a3a;--i:5"><a href="#cases"><span class="mtv__ch">CH 06</span>Кейсы</a></li>
+          <li style="--c:#3a4cf0;--i:6"><a href="#illustrations"><span class="mtv__ch">CH 07</span>Иллюстрации</a></li>
+          <li style="--c:#f5e23a;--i:7"><a href="#logofolio"><span class="mtv__ch">CH 08</span>Логофолио</a></li>
+          <li style="--c:#4fe3e3;--i:8"><a href="#contacts"><span class="mtv__ch">CH 09</span>Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="tv__pluge wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
     <div class="mtv__tape" aria-hidden="true"><span>★ ПОРТФОЛИО ★ DIY ★ 2026 ★ ДИЗАЙН ★ ИЛЛЮСТРАЦИИ ★ ПОРТФОЛИО ★ DIY ★ 2026 ★ ДИЗАЙН ★ ИЛЛЮСТРАЦИИ ★&nbsp;</span><span>★ ПОРТФОЛИО ★ DIY ★ 2026 ★ ДИЗАЙН ★ ИЛЛЮСТРАЦИИ ★ ПОРТФОЛИО ★ DIY ★ 2026 ★ ДИЗАЙН ★ ИЛЛЮСТРАЦИИ ★&nbsp;</span></div>
-    <nav class="mtv__nav" aria-label="Разделы">
-      <ul>
-        <li style="--i:0;--c:#ff3ea5;--r:-3deg"><a href="#about">Обо мне</a></li>
-        <li style="--i:1;--c:#00e5ff;--r:2deg"><a href="#experience">Опыт</a></li>
-        <li style="--i:2;--c:#b6ff00;--r:-2deg"><a href="#skills">Скиллы</a></li>
-        <li style="--i:3;--c:#ff7a00;--r:4deg"><a href="#clients">Клиенты</a></li>
-        <li style="--i:4;--c:#8a5cff;--r:-4deg"><a href="#level">Level 17+</a></li>
-        <li style="--i:5;--c:#ff3ea5;--r:3deg"><a href="#cases">Кейсы</a></li>
-        <li style="--i:6;--c:#00e5ff;--r:-2deg"><a href="#illustrations">Иллюстрации</a></li>
-        <li style="--i:7;--c:#b6ff00;--r:2deg"><a href="#logofolio">Логофолио</a></li>
-        <li style="--i:8;--c:#ff7a00;--r:-3deg"><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
     <p class="mtv__foot" aria-hidden="true">Короткевич Надежда · ©2026</p>
     <button class="mtv__close" type="button" aria-label="Закрыть меню">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 9 C16 16 24 24 32 31 M31 8 C24 17 15 24 9 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 9 31 31M31 9 9 31" fill="none" stroke="currentColor" stroke-width="3"/></svg>
     </button>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-      <filter id="boil"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+      <filter id="tv-wave" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.001 0.022" numOctaves="1" seed="1"/>
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 .5  0 0 0 0 0  0 0 0 0 1"/>
+        <feDisplacementMap in="SourceGraphic" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
     </svg>
   </div>
 
@@ -804,26 +798,47 @@
     </filter>
   </svg>
   <script>
-    // Плавающее меню: появляется после шапки, раскрывается в MTV-стиле
+    // Плавающее меню: появляется после шапки, раскрывается как настроечная таблица «NO SIGNAL»
     (() => {
       const fab = document.querySelector('.fab');
       const mtv = document.querySelector('.mtv');
       const hero = document.querySelector('.hero');
-      const turb = mtv.querySelector('#boil feTurbulence');
-      let boilTimer = null, lastFocus = null;
+      const turb = mtv.querySelector('#tv-wave feTurbulence');
+      const cv = mtv.querySelector('.mtv__static');
+      const ctx = cv.getContext('2d');
+      const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let timer = null, lastFocus = null, seed = 1;
       new IntersectionObserver(([e]) => fab.classList.toggle('is-on', !e.isIntersecting), { threshold: 0, rootMargin: '-40% 0px 0px 0px' }).observe(hero);
+      // серая рябь, как на канале без сигнала
+      const drawStatic = () => {
+        const W = cv.width = Math.ceil(innerWidth / 4), H = cv.height = Math.ceil(innerHeight / 4);
+        const img = ctx.createImageData(W, H), d = img.data;
+        for (let y = 0; y < H; y++) {
+          let base = 60 + Math.random() * 90, run = 0, v = base;
+          for (let x = 0; x < W; x++) {
+            if (run-- <= 0) { run = 3 + Math.random() * 30; v = base + (Math.random() - .5) * 120; }
+            const p = (y * W + x) * 4, g = Math.max(0, Math.min(255, v + (Math.random() - .5) * 40));
+            d[p] = d[p + 1] = d[p + 2] = g; d[p + 3] = 255;
+          }
+        }
+        ctx.putImageData(img, 0, 0);
+      };
+      const tick = () => {
+        drawStatic();
+        turb.setAttribute('seed', (seed = seed % 9 + 1));
+        turb.setAttribute('baseFrequency', `0.001 ${(0.016 + Math.random() * 0.012).toFixed(3)}`);
+      };
       const setOpen = (open) => {
         document.documentElement.classList.toggle('mtv-open', open);
         fab.setAttribute('aria-expanded', open);
         mtv.inert = !open;
         if (open) {
           lastFocus = document.activeElement;
-          setTimeout(() => mtv.querySelector('.mtv__nav a').focus({ preventScroll: true }), 450);
-          // «кипящие» рисованные линии, как в старых заставках
-          let s = 1;
-          boilTimer = setInterval(() => turb.setAttribute('seed', (s = s % 6 + 1)), 110);
+          tick();
+          if (!calm) timer = setInterval(tick, 90);
+          setTimeout(() => mtv.querySelector('.mtv__nav a').focus({ preventScroll: true }), 500);
         } else {
-          clearInterval(boilTimer);
+          clearInterval(timer);
           if (lastFocus) lastFocus.focus({ preventScroll: true });
         }
       };
