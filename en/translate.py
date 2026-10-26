@@ -131,6 +131,12 @@ T = {
 'Школа Андреева: главная страница': 'Andreev School: home page', 'Школа Андреева: мобильная версия': 'Andreev School: mobile version',
 'Школа Андреева: результаты теста скорости чтения': 'Andreev School: reading speed test results', 'Школа Андреева: программы обучения': 'Andreev School: programs',
 'Школа Андреева: стоимость обучения': 'Andreev School: pricing', 'Школа Андреева: о методе': 'Andreev School: about the method',
+'{ Дизайн сайта, UI/UX }': '{ Website design, UI/UX }',
+'Дизайн всех страниц сайта <span class="nw">B-intense</span>&nbsp;— инфракрасные кабины австрийского производства: «В&nbsp;интерьере», каталог моделей, карточки моделей с&nbsp;характеристиками и&nbsp;выбором цвета.': 'Design of all pages of the B-intense website&nbsp;— Austrian-made infrared cabins: «In the interior», model catalog, product pages with specs and color options.',
+'B-intense: страница «В интерьере»': 'B-intense: «In the interior» page', 'B-intense: мобильная версия': 'B-intense: mobile version',
+'B-intense: иллюстрация слоёв кожи для страницы о технологии': 'B-intense: skin layers illustration for the technology page',
+'B-intense: кабины для дома и офиса': 'B-intense: cabins for home and office', 'B-intense: каталог моделей': 'B-intense: model catalog',
+'B-intense: карточка модели AIR Solo': 'B-intense: AIR Solo product page',
 # CV / language
 'Скачать CV': 'Download CV', 'Korotkevich_Nadezhda_CV_RU.pdf': 'Korotkevich_Nadezhda_CV_EN.pdf',
 }
