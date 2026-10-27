@@ -149,6 +149,10 @@ T = {
 'EstateBlock: главная страница': 'EstateBlock: home page', 'EstateBlock: иллюстрации для первых экранов': 'EstateBlock: hero illustrations',
 'EstateBlock: объявления, преимущества, карта': 'EstateBlock: listings, benefits, map', 'EstateBlock: страница города Ванкувер': 'EstateBlock: Vancouver city page',
 'EstateBlock: карточка объекта': 'EstateBlock: listing page',
+'{ Корпоративный сайт, UI/UX, адаптив }': '{ Corporate website, UI/UX, responsive }',
+'Корпоративный сайт немецкой <span class="nw">AI-компании</span> KIMIMO. Главная, страницы технологий и&nbsp;продуктов, новости, о&nbsp;компании, контакты. Адаптив под смартфон, иллюстрации технологий.': 'Corporate website for KIMIMO, a German AI company. Home page, technology and product pages, news, about, contacts. Mobile version and technology illustrations.',
+'KIMIMO: главная страница': 'KIMIMO: home page', 'KIMIMO: мобильная версия': 'KIMIMO: mobile version', 'KIMIMO: иллюстрации технологий': 'KIMIMO: technology illustrations',
+'KIMIMO: страница технологий': 'KIMIMO: technologies page', 'KIMIMO: продукт KimiEye': 'KIMIMO: KimiEye product', 'KIMIMO: о компании': 'KIMIMO: about',
 # CV / language
 'Скачать CV': 'Download CV', 'Korotkevich_Nadezhda_CV_RU.pdf': 'Korotkevich_Nadezhda_CV_EN.pdf',
 }
