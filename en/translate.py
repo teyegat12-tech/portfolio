@@ -162,6 +162,7 @@ T = {
 # case 14 Evrostroy
 '{ Лендинг, иллюстрации, анимация }': '{ Landing page, illustration, animation }', 'Лендинг производителя тротуарной плитки «Еврострой». Все изометрические иллюстрации нарисованы мной, анимация проработана для&nbsp;каждого блока. Калькулятор сметы, каталог форм и&nbsp;фактур, адаптив.': 'Landing page for Evrostroy, a paving tile manufacturer. All isometric illustrations are drawn by me, with animation worked out for every block. Cost calculator, catalogue of shapes and textures, responsive layout.', 'Еврострой: первый экран лендинга': 'Evrostroy: landing hero', 'Еврострой: мобильная версия': 'Evrostroy: mobile version', 'Еврострой: изометрические иллюстрации': 'Evrostroy: isometric illustrations', 'Еврострой: калькулятор и формы плитки': 'Evrostroy: calculator and tile shapes', 'Еврострой: «С чего начать»': 'Evrostroy: “Where to start”', 'Еврострой: отгрузка и производство': 'Evrostroy: shipping and production', 
 'Нейрум: карточки курсов и навыки XXI века': 'Neyrum: course cards and 21st-century skills',
+'Лонгрид «Роберт Саакянц и его сказочные миры»: «Ух ты, говорящая рыба!»': 'Longread “Robert Saakyants and his fairy-tale worlds”: “Wow, a Talking Fish!”',
 # CV / language
 'Скачать CV': 'Download CV', 'Korotkevich_Nadezhda_CV_RU.pdf': 'Korotkevich_Nadezhda_CV_EN.pdf',
 }
