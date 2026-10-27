@@ -94,7 +94,7 @@ T = {
 '{ Редизайн лендинга, UI/UX, адаптив,': '{ Landing page redesign, UI/UX, responsive,',
 'Редизайн главной страницы МойСклад&nbsp;— облачного сервиса для&nbsp;торговли, склада и&nbsp;CRM. Новая структура и&nbsp;интерфейс, адаптив под все экраны,': 'Redesign of the MoySklad home page&nbsp;— a cloud service for retail, inventory and CRM. New structure and interface, responsive for all screens,',
 '{ Лого, лендинг, UI/UX, адаптив }': '{ Logo, landing page, UI/UX, responsive }',
-'Лендинг для&nbsp;компании «Лёгкий шаг»&nbsp;— проектирование, изготовление и&nbsp;установка лестниц. Разработка логотипа, структура и&nbsp;дизайн сайта, калькулятор стоимости, адаптив под планшет.': 'Landing page for «Legkiy Shag», a company that designs, builds and installs staircases. Logo, site structure and design, price calculator, tablet layout.',
+'Лендинг для&nbsp;компании «Лёгкий шаг»&nbsp;— проектирование, изготовление и&nbsp;установка лестниц. Разработка логотипа, структура и&nbsp;дизайн сайта, калькулятор стоимости, адаптив под планшет и&nbsp;смартфон.': 'Landing page for «Legkiy Shag», a company that designs, builds and installs staircases. Logo, site structure and design, price calculator, tablet and mobile layouts.',
 # alts (cases)
 'главный экран сайта': 'website home screen', 'главный экран лендинга': 'landing home screen', 'мобильная версия': 'mobile version',
 'соцсети и носители': 'social media and print', 'макет ': 'layout ', 'экран ': 'screen ', 'адаптивная версия': 'responsive version',
