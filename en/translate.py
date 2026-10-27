@@ -140,7 +140,7 @@ T = {
 '{ Приложение-планер }': '{ Planner app }',
 'Личный планер: задачи, привычки, здоровье и&nbsp;еда в&nbsp;одном приложении.': 'A personal planner: tasks, habits, health and food in one app.',
 'Идея, дизайн и&nbsp;разработка с&nbsp;помощью AI. Данные с&nbsp;Apple Watch, подсчёт калорий по&nbsp;фото, напоминания в&nbsp;Telegram, светлая и&nbsp;тёмная темы.': 'Idea, design and AI-assisted development. Apple Watch data, calorie counting from photos, Telegram reminders, light and dark themes.',
-'Планер: новая задача': 'Planner: new task', 'Планер: здоровье: активность и еда': 'Planner: health — activity and food',
+'Планер: новая задача': 'Planner: new task', 'Планер: главная': 'Planner: home', 'Планер: здоровье: активность и еда': 'Planner: health — activity and food',
 'Планер: еда по фото: нейросеть считает калории': 'Planner: food from a photo — AI counts calories', 'Планер: добавить еду': 'Planner: add food',
 'Планер: вода, сон и неделя': 'Planner: water, sleep and week', 'Планер: новая привычка': 'Planner: new habit',
 'Планер: настройки и цели': 'Planner: settings and goals', 'Планер: тёмная тема': 'Planner: dark theme',
