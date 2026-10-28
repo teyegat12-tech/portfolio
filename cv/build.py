@@ -4,7 +4,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = 'portfolio-two-steel-37.vercel.app'
+SITE = 'nkorotkevich.com'
 
 def photo_b64():
     im = Image.open(os.path.join(ROOT, 'assets/photo.webp')).convert('RGBA')
