@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Личный каталог Надежды Короткевич: сайты, инструменты, эксперименты и рабочие материалы Студии 12.">
+  <title>AI проекты — Студия 12 · Надежда Короткевич</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/Unbounded.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/JetBrainsMono.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">К проектам</a>
+  <div class="page">
+    <div class="background" aria-hidden="true"></div>
+    <div class="contours" aria-hidden="true"></div>
+    <div class="decor" aria-hidden="true" id="decor"></div>
+    <header class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <div class="paper-mask"><img src="assets/948-6-img4.webp" alt=""></div>
+        <img class="hero-scribble" src="assets/946-4879-img.webp" alt="">
+        <img class="plastic" src="assets/948-10-imgFwPlastic01.webp" alt="">
+        <img class="eye" src="assets/948-11-imgEye1.webp" alt="">
+        <img class="hand" src="assets/948-12-imgHand1.webp" alt="">
+      </div>
+      <a class="brand" href="/" aria-label="Портфолио Надежды Короткевич"><span>studio</span><b>12</b></a>
+      <p class="author">каталог/короткевич надежда</p>
+      <h1>AI проекты</h1>
+      <p class="subtitle">Все, над чем я работаю</p>
+      <a class="manifesto" href="#catalog">ХВАТИТ СМОТРЕТЬ. ПОРА ДЕЛАТЬ. ↗</a>
+    </header>
+    <main id="catalog" aria-label="Каталог проектов"></main>
+    <footer><p>Продолжение следует.</p><a class="back-top" href="#" aria-label="Вернуться в начало">↑</a></footer>
+    <div class="right-edge" aria-hidden="true"><div></div><div></div></div>
+  </div>
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <button class="close-dialog" type="button" aria-label="Закрыть">×</button>
+    <p class="dialog-kicker">STUDIO 12 / МАТЕРИАЛЫ</p>
+    <h2 id="dialog-title"></h2>
+    <div id="dialog-links"></div>
+    <div id="disk-settings" hidden>
+      <p>Эти материалы лежат на твоём компьютере. Укажи папку Студии 12 — путь сохранится только в этом браузере.</p>
+      <label for="studio-folder">Папка Студии 12</label>
+      <input id="studio-folder" placeholder="/Volumes/Мой диск/Студия 12" autocomplete="off" spellcheck="false">
+      <p class="hint">Скопируй путь к материалу. В Finder нажми ⌘⇧G и вставь его.</p>
+    </div>
+    <p id="dialog-feedback" role="status" aria-live="polite"></p>
+  </dialog>
+  <noscript><p class="noscript">Для загрузки каталога включи JavaScript.</p></noscript>
+</body>
+</html>
